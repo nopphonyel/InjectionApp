@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Injection Room</string>
+    <string name="select_task">เลือกโจทย์</string>
+    <string name="task_intradermal_0">วัคซีน PVRV 0.1 m; ID</string>
+    <string name="task_sub_0">ยาอินซูลิน ขนาด 10 ยูนิต ฉีดเข้าชั้นใต้ผิวหนัง ทุก 4 ชั่วโมง</string>
+    <string name="start_task">เริ่มทำโจทย์</string>
+</resources>

@@ -41,10 +41,10 @@ public class TaskTypeBinder implements ViewBinder , View.OnClickListener{
 
     public TaskTypeBinder(Context context , View view){
         mainView = view;
-        title = view.findViewById(R.id.task_type_label);
-        taskTypeLayout = view.findViewById(R.id.task_type_layout);
+        title = (TextView) view.findViewById(R.id.task_type_label);
+        taskTypeLayout = (RelativeLayout) view.findViewById(R.id.task_type_layout);
         taskTypeLayout.setOnClickListener(this);
-        taskListLayout = view.findViewById(R.id.task_list);
+        taskListLayout = (RelativeLayout) view.findViewById(R.id.task_list);
         taskListLayout.setVisibility(View.GONE);
         mContext = context;
     }
@@ -61,24 +61,25 @@ public class TaskTypeBinder implements ViewBinder , View.OnClickListener{
         appendList(listResouce.get(currentKey));
     }
 
-    Intent toTaskDetails;
+    ArrayList<Intent> toTaskDetails = new ArrayList<>();
+    Intent eachIntent;
+    ArrayList<RelativeLayout> allTask = new ArrayList<>();
     private void appendList(ArrayList<Integer> taskList){
         int size = taskList.size();
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);;
         RelativeLayout eachTask;
         TextView taskDesc;
-        toTaskDetails = new Intent(mContext , TaskDetails.class);
-        toTaskDetails.putExtra("KEY" , currentKey);
         for(int i=0; i < size ; i++){
+            eachIntent = new Intent(mContext , TaskDetails.class);
+            eachIntent.putExtra("KEY" , currentKey);
+            eachIntent.putExtra("TASK_NUM" , i);
+            toTaskDetails.add(i , eachIntent);
+
             eachTask = (RelativeLayout) inflater.inflate(R.layout.item_task_list , null);
-            eachTask.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mContext.startActivity(toTaskDetails);
-                }
-            });
+            eachTask.setOnClickListener(this);
             taskDesc = (TextView) eachTask.getChildAt(1);
             taskDesc.setText(mContext.getString(taskList.get(i)));
+            allTask.add(i , eachTask);
             taskListLayout.addView(eachTask);
         }
         isAppended = true;
@@ -95,6 +96,11 @@ public class TaskTypeBinder implements ViewBinder , View.OnClickListener{
                 taskListLayout.setVisibility(View.VISIBLE);
             }
             onClickShowMore.startAnimation(currentPosition);
+        }
+        for(int i = 0 ; i<allTask.size() ; i++){
+            if(view == allTask.get(i)){
+                mContext.startActivity(toTaskDetails.get(i));
+            }
         }
     }
 

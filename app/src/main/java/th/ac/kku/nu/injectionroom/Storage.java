@@ -8,6 +8,10 @@ import java.util.HashMap;
  */
 
 public class Storage {
+
+    public static String currentTaskTypeKey = "";
+    public static Integer currentTaskNumber = 0;
+
     static public class Task{
         public static ArrayList<String> taskTypeKeyList = new ArrayList<>();
         public static HashMap<String , Integer> taskTypeResource = new HashMap<>();

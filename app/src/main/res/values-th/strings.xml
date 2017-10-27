@@ -3,4 +3,11 @@
     <string name="app_name">Injection Room</string>
     <string name="select_task">เลือกโจทย์</string>
     <string name="start_task">เริ่มทำโจทย์</string>
+    <string name="select_eqp">เลือกอุปกรณ์</string>
+    <string name="select_syringe">เลือกไซริงค์</string>
+    <string name="select_needle_size">เลือกขนาดเข็ม</string>
+    <string name="select_drug">เลือกยา</string>
+    <string name="no_21">เบอร์ 21</string>
+    <string name="no_24">เบอร์ 24</string>
+    <string name="no_27">เบอร์ 27</string>
 </resources>

@@ -22,4 +22,12 @@
         <item name="android:textSize">30sp</item>
     </style>
 
+    <style name="BigButton">
+        <item name="android:layout_height">55dp</item>
+    </style>
+
+    <style name="BigButton.ActionPositive" parent="BigButton">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+    </style>
+
 </resources>

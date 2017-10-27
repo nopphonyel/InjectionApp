@@ -8,4 +8,11 @@
     <string name="task_intramus_0" translatable="false">DMPA 150 mg IM</string>
     <string name="task_sub_0" translatable="false">Regular insulin 10 IU S.C q 4 hr</string>
     <string name="start_task">Start task</string>
+    <string name="select_eqp">Select Equipment</string>
+    <string name="select_syringe">Select syringe</string>
+    <string name="select_needle_size">Select needle size</string>
+    <string name="select_drug">Select drug</string>
+    <string name="no_21">No. 21</string>
+    <string name="no_24">No. 24</string>
+    <string name="no_27">No. 27</string>
 </resources>

@@ -18,7 +18,9 @@ public class SelectTask extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_task);
-        Storage.Task.implementTask();
+        if(Storage.Task.taskTypeKeyList.size() == 0) {
+            Storage.Task.implementTask();
+        }
         taskTypeList = (RecyclerView) findViewById(R.id.task_type_list);
         taskTypeAdapter = new TaskTypeAdapter();
         taskTypeList.setAdapter(taskTypeAdapter);

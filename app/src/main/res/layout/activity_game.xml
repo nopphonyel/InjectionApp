@@ -1,11 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="th.ac.kku.nu.injectionroom.activity.game.GameActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/control_button"
+        android:scaleType="centerCrop"
+        android:src="@drawable/skin" />
 
+    <ImageView
+        android:id="@+id/hand_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/control_button"
+        android:scaleType="centerCrop"
+        android:src="@drawable/subcu" />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/syringe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/control_button"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cc3_have_drug_a45" />
+
+    <ImageView
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/control_button"
+        android:scaleType="centerCrop"
+        android:src="@drawable/subcu_skin_mask" />
+
+    <HorizontalScrollView
+        android:id="@+id/control_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_glove"
+                style="@style/each_control_size" />
+
+            <ImageButton
+                android:id="@+id/btn_cotton"
+                style="@style/each_control_size" />
+
+            <ImageButton
+                android:id="@+id/btn_syringe"
+                style="@style/each_control_size" />
+
+            <ImageButton
+                android:id="@+id/btn_plaster"
+                style="@style/each_control_size" />
+
+            <ImageButton
+                android:id="@+id/alcohol"
+                style="@style/each_control_size" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:id="@+id/injection_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/control_button">
+
+        <LinearLayout
+            android:id="@+id/angle_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <android.support.v7.widget.AppCompatSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/angle_control"/>
+        <Button
+            android:text="INJECT"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            style="@style/BigButton.ActionPositive"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

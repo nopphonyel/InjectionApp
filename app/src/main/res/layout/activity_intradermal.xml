@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="th.ac.kku.nu.injectionroom.activity.Intradermal">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:clickable="false"
+            android:foreground="?selectableItemBackground"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="12dp"
+            card_view:cardElevation="3dp"
+            card_view:contentPadding="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    style="@style/InformationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intradermal_type" />
+
+                <TextView
+                    style="@style/InformationContents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/intradermal_info" />
+
+                <TextView
+                    style="@style/InformationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/purpose" />
+
+                <TextView
+                    android:id="@+id/intradermal_purpose"
+                    style="@style/InformationContents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp" />
+
+                <TextView
+                    style="@style/InformationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/syringe_type" />
+
+                <TextView
+                    style="@style/InformationContents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/intradermal_syringe_size" />
+
+                <TextView
+                    style="@style/InformationContents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:text="@string/intradermal_syringe_length" />
+
+                <TextView
+                    style="@style/InformationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/position_injecting" />
+
+                <TextView
+                    style="@style/InformationContents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/intradermal_position" />
+
+                <ImageView
+                    android:id="@+id/id_position"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    style="@style/InformationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/procedure" />
+
+                <TextView
+                    android:id="@+id/intradermal_procedure"
+                    style="@style/InformationContents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/id_15"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:padding="10dp" />
+
+                    <ImageView
+                        android:id="@+id/id_ex"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:padding="10dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

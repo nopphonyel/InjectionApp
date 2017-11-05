@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="th.ac.kku.nu.injectionroom.activity.Intramuscular">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:clickable="false"
+            android:foreground="?selectableItemBackground"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="12dp"
+            card_view:cardElevation="3dp"
+            card_view:contentPadding="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationTitle"
+                android:text="@string/intramuscular_type"/>
+            <TextView
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationContents"
+                android:text="@string/intramuscular_info"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationTitle"
+                android:text="@string/purpose"/>
+
+            <TextView
+                android:id="@+id/intramuscular_purpose"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationContents" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationTitle"
+                android:text="@string/syringe_type"/>
+            <TextView
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationContents"
+                android:text="@string/intramuscular_syringe_size"/>
+            <TextView
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationContents"
+                android:text="@string/intramuscular_syringe_length"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationTitle"
+                android:text="@string/position_injecting"/>
+            <TextView
+                android:id="@+id/intramuscular_position"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationContents"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/im_1"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="10dp"/>
+                <ImageView
+                    android:id="@+id/im_2"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/im_3"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="10dp"/>
+                <ImageView
+                    android:id="@+id/im_4"
+                    android:padding="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationTitle"
+                android:text="@string/procedure"/>
+            <TextView
+                android:id="@+id/intramuscular_procedure"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationContents" />
+
+            <ImageView
+                android:id="@+id/im_90"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationTitle"
+                android:text="@string/z_track"/>
+            <TextView
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationContents"
+                android:text="@string/z_track_info"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationTitle"
+                android:text="@string/procedure"/>
+            <TextView
+                android:id="@+id/z_track_procedure"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InformationContents" />
+
+            <ImageView
+                android:id="@+id/im_z"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                />
+
+
+        </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

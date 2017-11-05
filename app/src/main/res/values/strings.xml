@@ -1,4 +1,4 @@
-<resources>
+    <resources>
     <string name="app_name">Injection Room</string>
     <string name="select_task">Select Task</string>
     <string name="intradermal" translatable="false">Intradermal</string>
@@ -15,6 +15,9 @@
     <string name="no_21">No. 21</string>
     <string name="no_24">No. 24</string>
     <string name="no_27">No. 27</string>
+    <string name="tenR">TenR</string>
+    <string name="information">Information</string>
+    <string name="play_game">Play game</string>
 
     <string name="ten_r_title">10 R’s in Giving Medication</string>
     <string name="ten_r_1">1. Right Drug</string>
@@ -38,6 +41,238 @@
     <string name="detail_ten_r_8">\t\t\t\tBefore you administer, please explain about patient’s right, benefit and side effects of drug. The patient can refuse or accept it.</string>
     <string name="detail_ten_r_9">\t\t\t\tCheck the medicine’s interaction with other drugs, and drugs with foods that affect to effective treatment.</string>
     <string name="detail_ten_r_10">\t\t\t\tExplain to patient about their drugs and observe side effects of drugs.</string>
+    
+    <string name="intradermal_type">Intradermal injection, ID</string>
+    <string name="intradermal_info">ฉีดเข้าไปในชั้นหนังแท้ซึ่งอยู่ใต้ชั้นหนังกำพร้า ปริมาณยาที่ฉีดไม่เกิน 0.3 มล.</string>
+    <string-array name="intradermal_purpose">
+        <item>-วินิจฉัยโรคโดยการทดสอบผิวหนัง (Skin testing)</item>
+        <item>-ทดสอบภูมิแพ้</item>
+        <item>-ให้ภูมิคุ้มกันโรค</item>
+        <item>-ฉีดยาเฉพาะที่</item>
+    </string-array>
+    <string name="intradermal_syringe_size">เบอร์/No. 25, 26 หรือ 27</string>
+    <string name="intradermal_syringe_length">ความยาวเข็ม 1/2 นิ้ว</string>
+    <string name="intradermal_position">ฉีดผิวหนังที่บาง ไม่มีขน หรือมี Keratin ที่น้อย เช่น แขนท่อนปลายด้านใน และหลังส่วนบน</string>
+    <string-array name="intradermal_step">
+        <item>1.ตรวจสอบความถูกต้องตามหลัก10R</item>
+        <item>2.จัดให้ผู้ป่วยอยู่ในท่าที่สุขสบาย และสะดวกต่อการฉีดยา</item>
+        <item>3.ล้างมือให้สะอาด และสวมถุงมือ</item>
+        <item>4.เตรียมยา ไล่อากาศในกระบอกฉีดยา</item>
+        <item>5.ประเมินตำแหน่งที่ฉีด โดยฉีดผิวหนังที่บาง ไม่มีขน หรือมี Keratin ที่น้อย เช่น แขนท่อนปลายด้านในและหลังส่วนบน</item>
+        <item>6.ทำความสะอาดผิวหนังด้วย 70% แอลกอฮอล์</item>
+        <item>7.ดึงปลอกเข็มออก โดยใช้มอข้างที่ถนัดจับเข็ม ให้ปลายตัดของเข็มหงายขึ้น</item>
+        <item>8.แทงเข็มทำมุม 5-15 องศากับผิวหนังเข้าไปลึกประมาณ 2-3 มม. และจับ syringe ให้นิ่ง</item>
+        <item>9.ดันยาจนมองเห็นตุ่มนูนเล็กๆ เส้นผ่านศูนย์กลางประมาณ 6 มม. **ถ้าไม่มีตุ่มนูนให้ถอยเข็มเล็กน้อย แต่ไม่ให้เข็มหลุดออกจากผิวหนัง แล้วดันเข้าใหม่ ให้ถูกตำแหน่ง(ถ้าไม่มีตุ่มนูนขึ้น ให้ถอนเข็มออกเล็กน้อย)</item>
+        <item>10.ฉีดเสร็จวางสำลีแห้งบนผิวหนังที่ฉีด ดึงเข็มฉีดยาออก</item>
+        <item>11.วางขณะดึงเข็มออก ไม่กด ไม่คลึง แค่เช็ดเบาๆ</item>
+        <item>12.เก็บอุปกรณ์ และบันทึกหลังการให้ยา</item>
+    </string-array>
+
+
+    <string name="subcutaneous_type">Subcutaneous or hypodermic injection</string>
+    <string name="subcutaneous_info">ฉีดเข้าไปในชั้นกล้ามเนื้อ ฉีดปริมาณ 2-5 มล.</string>
+    <string-array name="subcutaneous_purpose">
+        <item>-ฉีดยาที่ระคายเคืองต่อผิวหนังชั้น Subcutaneous หรือฉีดยาที่เหนียวข้น ดูดซึมยาก</item>
+        <item>-ให้ยาแก่ผู้ป่วยที่ไม่สามารถรับประทานยาได้</item>
+    </string-array>
+    <string name="subcutaneous_syringe_size">เบอร์/No. 24, 25 หรือ 26</string>
+    <string name="subcutaneous_syringe_length">ความยาวเข็ม 1/2 - 5/8 นิ้ว</string>
+    <string-array name="subcutaneous_position">
+        <item>-บริเวณต้นแขนด้านนอก (Outer aspect of upper arm)</item>
+        <item>-บริเวณหน้าขา (Anterior aspect of the thigh)</item>
+        <item>-Umbilical area โดยห่างจากสะดือ 1 นิ้ว</item>
+        <item>-บริเวณหลัง</item>
+    </string-array>
+    <string-array name="subcutaneous_step">
+        <item>1.ตรวจสอบความถูกต้องตามหลัก10R</item>
+        <item>2.จัดให้ผู้ป่วยอยู่ในท่าที่สุขสบาย และสะดวกต่อการฉีดยา</item>
+        <item>3.ล้างมือให้สะอาด และสวมถุงมือ</item>
+        <item>4.ประเมินตำแหน่งที่ฉีด บริเวณที่นิยมการฉีดยาเข้าชั้นใต้ผิวหนัง คือ ต้นแขน หน้าขาและหน้าท้อง</item>
+        <item>5.ทำความสะอาดผิวหนังด้วย 70% แอลกอฮอล์</item>
+        <item>6.ดึงปลอกเข็มออก โดยใช้มอข้างที่ถนัดจับเข็ม ให้ปลายตัดของเข็มหงายขึ้น</item>
+        <item>7.ใช้มือข้างที่ไม่ถนัด โดยใช้หัวแม่มือและนิ้วชี้ยกผิวหนังขึ้นสูงประมาณ 1 นิ้ว โดยยกผิวหนังไว้เวลาที่แทงเข็ม</item>
+        <item>8.แทงเข็มลงไปอย่างรวดเร็ว โดยทำมุม 45 หรือ 90 องศา</item>
+        <item>9.เลื่อนมือข้างที่จับผิวหนังมาจับปลายกระบอกฉีดยา</item>
+        <item>10.มืออีกข้างหนึ่งดึงลูกสูบขึ้นเล็กน้อย</item>
+        <item>11.ถ้ามีเลือดเข้ามาในกระบอก ให้ดึงเข็มออกแล้วหาตำแหน่งฉีดใหม่</item>
+        <item>12.ถ้าไม่มีเลือดให้ดันยาเข้าไปจนหมด</item>
+        <item>13.เมื่อฉีดเสร็จวางสำลีบนผิวหนังที่ฉีด ดึงเข็มฉีดยาออก</item>
+        <item>14.วางขณะดึงเข็มออก ไม่กด คลึงเบาๆ</item>
+        <item>15.เก็บอุปกรณ์ และบันทึกหลังการให้ยา</item>
+    </string-array>
+
+    <string name="intramuscular_type">Intramuscular injection</string>
+    <string name="intramuscular_info">ฉีดเข้าไปในเนื้อเยื่อซึ่งอยู่ชั้นใต้ผิวหนัง ปริมาณยาที่ฉีดไม่เกิน 2 มล.</string>
+    <string-array name="intramuscular_purpose">
+        <item>-ให้ยาแก่ผู้ป่วยที่ไม่สามารถรับประทานยาได้</item>
+        <item>-ให้ยาบางชนิด เช่น Insulin และ Heparin</item>
+    </string-array>
+    <string name="intramuscular_syringe_size">เบอร์/No. 21, 22 หรือ 23</string>
+    <string name="intramuscular_syringe_length">ความยาวเข็ม 1-2 นิ้ว</string>
+    <string-array name="intramuscular_position">
+        <item>Dorsal gluteal</item>
+        <item>Ventro gluteal</item>
+        <item>Deltoid muscle</item>
+        <item>Vastus lateralis</item>
+    </string-array>
+    <string-array name="intramuscular_step">
+        <item>1.ตรวจสอบความถูกต้องตามหลัก10R</item>
+        <item>2.จัดให้ผู้ป่วยอยู่ในท่าที่สุขสบาย และสะดวกต่อการฉีดยา</item>
+        <item>3.ล้างมือให้สะอาด และสวมถุงมือ</item>
+        <item>4.ประเมินตำแหน่งที่ฉีด บริเวณที่นิยมฉีด คือ ต้นแขน ต้นขาและสะโพก</item>
+        <item>5.ทำความสะอาดผิวหนังด้วย 70% แอลกอฮอล์</item>
+        <item>6.ดึงปลอกเข็มออก โดยใช้มอข้างที่ถนัดจับเข็ม ให้ปลายตัดของเข็มหงายขึ้น</item>
+        <item>7.ใช้มือข้างที่ไม่ถนัด โดยใช้หัวแม่มือและนิ้วชี้ถ่างผิวหนังให้ตึง</item>
+        <item>8.แทงเข็มลงไปอย่างรวดเร็ว โดยทำมุม 45 ในเด็ก /90 องศาในผู้ใหญ่ ความลึก 3/4 - 1 นิ้ว</item>
+        <item>9.เลื่อนมือข้างที่จับผิวหนังมาจับปลายกระบอกฉีดยา</item>
+        <item>10.มืออีกข้างหนึ่งดึงลูกสูบขึ้นเล็กน้อย</item>
+        <item>11.ถ้ามีเลือดเข้ามาในกระบอก ให้ดึงเข็มออกแล้วหาตำแหน่งฉีดใหม่</item>
+        <item>12.ถ้าไม่มีเลือดให้ดันยาเข้าไปจนหมด</item>
+        <item>13.เมื่อฉีดเสร็จวางสำลีบนผิวหนังที่ฉีด ดึงเข็มฉีดยาออก</item>
+        <item>14.กดและคลึงยาบริเวณที่ฉีดเบาๆ</item>
+        <item>15.เก็บอุปกรณ์ และบันทึกหลังการให้ยา</item>
+    </string-array>
+    <string name="z_track">Z-track</string>
+    <string name="z_track_info">ตำแหน่งที่นิยมฉีด คือ บริเวณสะโพก</string>
+    <string-array name="z_track_step">
+        <item>1.ตรวจสอบความถูกต้องตามหลัก10R</item>
+        <item>2.จัดให้ผู้ป่วยอยู่ในท่าที่สุขสบาย และสะดวกต่อการฉีดยา</item>
+        <item>3.ล้างมือให้สะอาด และสวมถุงมือ</item>
+        <item>4.ประเมินตำแหน่งที่ฉีด ตำแหน่งที่นิยมฉีด คือ บริเวณสะโพก</item>
+        <item>5.ทำความสะอาดผิวหนังด้วย 70% แอลกอฮอล์</item>
+        <item>6.ดึงปลอกเข็มออก โดยใช้มอข้างที่ถนัดจับเข็ม ให้ปลายตัดของเข็มหงายขึ้น</item>
+        <item>7.ใช้มือข้างที่ไม่ถนัดดึงผิวหนังไปทางด้านข้างและลงมาด้านล่าง 1 นิ้ว จากนั้นวางข้อมือไว้ขณะที่ดึงผิวหนัง แล้วใช้มือข้างที่ถนัดแทงเข็มลงไป</item>
+        <item>8.แทงเข็มลงไปอย่างรวดเร็ว โดยทำมุม 90 องศา</item>
+        <item>9.เลื่อนมือข้างที่จับผิวหนังมาจับปลายกระบอกฉีดยา</item>
+        <item>10.มืออีกข้างหนึ่งดึงลูกสูบขึ้นเล็กน้อย</item>
+        <item>11.ถ้ามีเลือดเข้ามาในกระบอก ให้ดึงเข็มออกแล้วหาตำแหน่งฉีดใหม่</item>
+        <item>12.ถ้าไม่มีเลือดให้ดันยาเข้าไปจนหมด</item>
+        <item>13.เมื่อฉีดเสร็จค้างเข็มไว้ประมาณ 10 วินาที</item>
+        <item>14.ปล่อยผิวหนังให้กลับที่เดิม ไม่ต้องคลึงบริเวณที่ฉีดยา</item>
+        <item>15.เก็บอุปกรณ์ และบันทึกการให้ยา</item>
+    </string-array>
+
+    <string name="intravenous_direct_type">Intravenous medication (Direct)</string>
+    <string-array name="intravenous_purpose">
+        <item>-ให้ยาออกฤทธิ์เร็ว</item>
+        <item>-ให้ยาที่ระคายเคืองต่อผิวหนังชั้น Subcutaneous และ Muscle</item>
+        <item>-ต้องการรักษาระดับของยาในกระแสเลือดให้สม่ำเสมอ ยาที่ให้ต้องมีลักษณะเป็นน้ำใส และไม่มีส่วนผสมของน้ำมัน</item>
+    </string-array>
+    <string-array name="intravenous_direct_step">
+        <item>1.ตรวจสอบความถูกต้องตามหลัก10R</item>
+        <item>2.จัดให้ผู้ป่วยอยู่ในท่าที่สุขสบาย และสะดวกต่อการฉีดยา</item>
+        <item>3.ล้างมือให้สะอาด และสวมถุงมือ</item>
+        <item>4.ประเมินตำแหน่งที่ฉีด เช่น บริเวณที่ on heparin lock หรือ Three ways</item>
+        <item>5.ดึงปลอกเข็มออกโดยใช้มือข้างที่ถนัดจับเข็มให้ปลายตัดของเข็มหงายขึ้น</item>
+        <item>6.ให้ผู้ป่วยกำมือข้างที่จะฉีดยาให้แน่นใช้สายรัดห้ามเลือดเหนือบริเวณที่จะแทงเข็ม 2-3 นิ้ว</item>
+        <item>7.ทำความสะอาดผิวหนังบริเวณที่จะแทงเข็มด้วย antiseptic solution</item>
+        <item>8.ไล่อากาศจากกระบอกฉีดยาจนหมด</item>
+        <item>9.ให้วางนิ้วหัวแม่มือข้างที่ไม่ถนัดบนหลอดเลือดในตําแหน่งที่ต่ำกว่าตําแหน่งที่จะแทงประมาณ 2 นิ้วมือ ส่วนมือขวาถือกระบอกฉีดยา</item>
+        <item>10.แทงเข็มเข้าหลอดเลือดดำ โดยหงายปลายตัดเข็มขึ้น</item>
+        <item>11.เมื่อเลือดเข้ามาในกระบอกฉีดยาให้ลดมุมการแทงเล็กลง ให้เข็มขนานกับผิวหนัง</item>
+        <item>12.ดันเข็มเข้าไปในหลอดเลือดดำประมาณ 2/3 ของความยาวเข็ม</item>
+        <item>13.ถ้ายังมีเลือดไหลเข้ามาในกระบอกฉีดยา แสดงว่าเข็มยังอยู่ในหลอดเลือดดำ ให้ปลดสาย tourniquet และเดินยาช้า ๆ จนหมด สังเกตอาการผู้ป่วยขณะให้ยา</item>
+        <item>14.ใช้สำลีกดบนตำแหน่งที่แทงเข็ม ถอนเข็มออก กดสำลีไว้สักครู่ให้เลือดหยุด หรือใช้พลาสเตอร์ปิดทับสำลีไว้ให้แน่น</item>
+    </string-array>
+
+    <string name="intravenous_heparinLock_type">Intravenous medication (Heparin Lock)</string>
+    <string name="intravenous_heparinLock_info">\tHeparin lock หรือ ที่ในปัจจุบันนิยมใช้เป็น normal saline lock แทนนั้นเป็นชุดอุปกรณ์ขนาดเล็กที่ใส่คาหลอดเลือดดำไว้สำหรับให้ยาทางหลอดเลือดดำเป็นระยะ ๆ ประกอบด้วย 2 ส่วน คือ\n\tส่วนที่เป็นเข็มพลาสติก (medicut หรือ iv cath หรือ intravenous catheter)ใส่คาไว้ในหลอดเลือดดำ และอีกส่วนเป็นรูปทรงกระบอกปลายข้างหนึ่งต่อกับเข็ม\n\tอีกปลายเป็นจุกยางปิดไว้เพื่อใช้สำหรับแทงเข็มเพื่อฉีดยา (medication port หรือ injection plug) หรือ อาจใช้สาย extension tub ขนาดเล็กและสั้นแทนจุกยางดังกล่าว\n\tในชุด heparin lock จะใส่ heparin solution 10 – 100 unit/cc. เมื่อผสมเสร็จแล้วจะแบ่งใช้ครั้งละ 1.0 - 2.0 cc หรือ normal saline solution (NSS) ครั้งละ 1-3 cc ฉีด lock ไม่ให้เลือดแข็งตัว หลังเสร็จสิ้นการฉีดยา</string>
+    <string-array name="intravenous_heparinLock_step">
+        <item>1.ตรวจสอบความถูกต้องตามหลัก10R</item>
+        <item>2.จัดให้ผู้ป่วยอยู่ในท่าที่สุขสบาย และสะดวกต่อการฉีดยา</item>
+        <item>3.ล้างมือให้สะอาด และสวมถุงมือ</item>
+        <item>4.ประเมินตำแหน่งที่มี on heparin lock ต่ออยู่</item>
+        <item>5.ดึงปลอกเข็มออก โดยใช้มอข้างที่ถนัดจับเข็ม ให้ปลายตัดของเข็มหงายขึ้น</item>
+        <item>6.เตรียมกระบอกฉีดยาบรรจุ heparin ตามวิธีผสมข้างต้นจำนวน 2 cc (ไล่อากาศออกจนหมด)</item>
+        <item>7.เตรียมกระบอกฉีดยาบรรจุ NSS จำนวน 2 cc (ไล่อากาศออกจนหมด)</item>
+        <item>8.ทำความสะอาด injection plug ด้วย 70 % alcohol ปล่อยให้แห้ง</item>
+        <item>9.ฉีด NSS เข้า injection plug 1 cc. เพื่อไล่ heparin เก่า และทดสอบว่า clot หรือไม่ ถ้าฉีดยาก ฝืดผิดปกติ ห้ามใช้แรงดันฉีดเข้าไป ให้สงสัยว่าเกิด clot ให้ off injection plug แล้วแทงเปิดเส้นเลือดตำแหน่งใหม่</item>
+        <item>10.ถ้าไม่มีปัญหา ให้ ฉีดยาเข้าทาง injection plug จนหมดตามขนาดที่ผู้ป่วยต้องได้รับ</item>
+        <item>11.ฉีด NSS เข้า injection plug 1 cc. เพื่อไล่ยา</item>
+        <item>12.แล้วฉีด heparin เข้า injection plug เพื่อ lock</item>
+    </string-array>
+
+    <string name="intravenous_normalSalineLock_type">Intravenous medication (Normal Saline Lock)</string>
+    <string-array name="intravenous_normalSalineLock_step">
+        <item>1.ตรวจสอบความถูกต้องตามหลัก10R</item>
+        <item>2.จัดให้ผู้ป่วยอยู่ในท่าที่สุขสบาย และสะดวกต่อการฉีดยา</item>
+        <item>3.ล้างมือให้สะอาด และสวมถุงมือ</item>
+        <item>4.ประเมินตำแหน่งผิวหนังที่มี normal saline lock ต่ออยู่</item>
+        <item>5.ดึงปลอกเข็มออก โดยใช้มอข้างที่ถนัดจับเข็ม ให้ปลายตัดของเข็มหงายขึ้น</item>
+        <item>6.เตรียมกระบอกฉีดยาบรรจุ NSS 3 cc. ไล่อากาศออกจนหมด</item>
+        <item>7.ทำความสะอาด injection plug ด้วย 70 % alcohol ปล่อยให้แห้ง</item>
+        <item>8.ฉีด NSS เข้า injection plug 1 cc. เพื่อทดสอบว่า clot หรือไม่ ถ้าฉีดยาก ฝืด ผิดปกติ ห้ามใช้แรงดันฉีดเข้าไป ให้สงสัยว่าเกิด clot ให้ off injection plug แล้วแทงเปิดเส้นเลือดตำแหน่งใหม่</item>
+        <item>9.ถ้าไม่มีปัญหา ให้ ฉีดยาเข้าทาง injection plug จนหมดตามขนาดที่ผู้ป่วยต้องได้รับ</item>
+        <item>10.ฉีด NSS เข้า injection plug 2 cc. เพื่อไล่ยา และ lock กรณีที่ใช้ normal saline lock ถ้ามีการฉีดยาห่างกันเกิน 6-8 ชั่วโมง อาจทำให้ clot ได้ จะต้องฉีด NSS ทุก 6-8 ชั่วโมง</item>
+    </string-array>
+
+    <string name="intravenous_IVSet_type">Intravenous medication (IV Set)</string>
+    <string-array name="intravenous_IVSet_step">
+        <item>1.ตรวจสอบความถูกต้องตามหลัก10R</item>
+        <item>2.จัดให้ผู้ป่วยอยู่ในท่าที่สุขสบาย และสะดวกต่อการฉีดยา</item>
+        <item>3.ล้างมือให้สะอาด และสวมถุงมือ</item>
+        <item>4.ประเมินตำแหน่งผิวหนังที่มีชุดสารละลายต่ออยู่</item>
+        <item>5.ดึงปลอกเข็มออก โดยใช้มอข้างที่ถนัดจับเข็ม ให้ปลายตัดของเข็มหงายขึ้น</item>
+        <item>6.ตรวจสอบว่าน้ำเกลือไหลดี</item>
+        <item>7.ใช้สำลีชุบ แอลกอฮอล์ 70 % เช็ดบริเวณ medication port หรือท่อยางของสายน้ำเกลือ ขอย้ำว่าไม่ใช่ตรงท่อที่เป็นพลาสติกใส เพราะถ้าฉีดตรงนั้น สายน้ำเกลือจะรั่ว ใช้ไม่ได้ต้องเปลี่ยนสายใหม่ทำให้สิ้นเปลือง</item>
+        <item>8.ใช้เข็มเบอร์ 23 หรือ 24 ในการฉีด ไล่อากาศจากกระบอกฉีดยาจนหมด</item>
+        <item>9.แทงเข็มเข้าบริเวณ medication port หรือ ท่อยางที่เช็ดแอลกอฮอล์ไว้แล้วโดยหงายปลายตัดเข็มขึ้น หักพับสายให้น้ำเกลือเหนือตำแหน่งฉีดยา เดินยาช้า ๆ จนหมดสังเกตอาการผู้ป่วยขณะให้ยา</item>
+        <item>10.ใช้สำลีชุบ แอลกอฮอล์ 70 % เช็ดบริเวณท่อยางของสายน้ำเกลือ หลังถอนเข็มฉีดยาออก กรณีที่พบปัญหาดันยาไม่เข้า หรือฝืด ให้หยุด และ ถอดเข็มให้นำเกลืออันเดิมทิ้งและแทงใหม่ก่อนให้ยาต่อ ห้ามใช้แรงในการดันยาเข้าไปเพราะอาจจะไปดันลิ่มเลือดให้หลุดเข้าไปในกระแสเลือด และไปอุดตันหลอดเลือดที่สำคัญอื่นๆได้</item>
+    </string-array>
+
+    <string name="intravenous_SoluSet_type">Intravenous medication (Solu Set)</string>
+    <string-array name="intravenous_SoluSet_step">
+        <item>1.ตรวจสอบความถูกต้องตามหลัก10R</item>
+        <item>2.จัดให้ผู้ป่วยอยู่ในท่าที่สุขสบาย และสะดวกต่อการฉีดยา</item>
+        <item>3.ล้างมือให้สะอาด และสวมถุงมือ</item>
+        <item>4.ประเมินวันหมดอายุของชุดสารละลาย</item>
+        <item>5.เปิดที่หนีบตัวบนที่อยู่ระหว่างขวดให้สารละลาย และกระเปาะใหญ่ปล่อยให้สารละลายไหลลงจนได้ปริมาณที่ต้องการ</item>
+        <item>6.ใช้สำลีแอลกอฮอล์ 70% เช็ดปลายก้านที่ใช้สำหรับใส่ยาเข้ากระเปาะ</item>
+        <item>7.ถอดปลอกเข็มแล้งแทงลงบนจุกเหนือก้านสำหรับฉีดยาเข้ากระเปาะ</item>
+        <item>8.เปิดที่หนีบเข้ากระเปาะเล็กแล้วควบคุมการหยดของสารละลายตามแผนการรักษา</item>
+        <item>9.เก็บอุปกรณ์</item>
+        <item>10.สังเกตอาการ และบันทึกการให้ยา</item>
+    </string-array>
+
+    <string name="intravenous_ThreeWay_type">Intravenous medication (Three Way)</string>
+    <string-array name="intravenous_ThreeWay_step">
+        <item>1.ตรวจสอบความถูกต้องตามหลัก10R</item>
+        <item>2.จัดให้ผู้ป่วยอยู่ในท่าที่สุขสบาย และสะดวกต่อการฉีดยา</item>
+        <item>3.ล้างมือให้สะอาด และสวมถุงมือ</item>
+        <item>4.ประเมินตำแหน่งที่มี Three-way ต่ออยู่</item>
+        <item>5.ต่อเข็มให้เข้ากับชุดให้สารละลายของขวดยา พร้อมไล่อากาศในสายออกให้เรียบร้อย</item>
+        <item>6.Clamp สายชุดให้สารละลายยา</item>
+        <item>7.ต่อชุดให้สารละลายยาเข้ากับชุดให้สารละลายเดิมผ่านทาง Three-way โดยปฏิบัติดังนี้</item>
+        <item>\t- หมุน Three - way เพื่อหยุดการให้สารละลายเดิม</item>
+        <item>\t- เช็ดจุก Three – way ด้วยสำลีแอลกอฮอล์ 70% แล้วเปิดจุกออก</item>
+        <item>\t- เปิดจุกชุดให้สารละลายยา นำเข้ามาต่อกับจุก Three – way</item>
+        <item>\t- คลาย Clamp ชุดให้สารละลายยา</item>
+        <item>\t- ปรับจุก Three – way เพื่อให้สารละลายยาไหล มี 2 กรณี ดังนี้</item>
+        <item>\t\t1)ให้เพียงสารละลายยา โดยหมุน Three – way ปิดให้สารละลายเดิมแต่เปิดให้สารละลายยา</item>
+        <item>\t\t2)ให้ยาพร้อมกับสารละลายเดิม โดยหมุน Three – way ให้ทั้งสารละลายเดิมและยาไหลมาพร้อมกัน</item>
+        <item>\t- ปรับอัตราการไหลของยาตามแผน</item>
+        <item>\t- ถอดสายของชุดให้สารละลายยาออกเมื่อยาหมด</item>
+        <item>8.เก็บอุปกรณ์</item>
+        <item>9.สังเกตอาการ และบันทึกการให้ยา</item>
+    </string-array>
+
+
+    <string name="purpose">Purpose</string>
+    <string name="syringe_type">Syringe Type</string>
+    <string name="position_injecting">Position</string>
+    <string name="procedure">Procedure</string>
+
+    <string name="injection_position">Injection Position</string>
+    <string name="Intradermal_text">Intradermal</string>
+    <string name="Subcutaneous_text">Subcutaneous</string>
+    <string name="Intramuscular_text">Intramuscular</string>
+    <string name="Intravenous_text">Intravenous</string>
+    <string name="Intravenous_direct_text">Type: Direct</string>
+    <string name="Intravenous_heparinLock_text">Type: Heparin Lock</string>
+    <string name="Intravenous_normalSaline_text">Type: Normal Saline Lock</string>
+    <string name="Intravenous_IVSet_text">Type: IV Set</string>
+    <string name="Intravenous_soluSet_text">Type: Solu Set</string>
+    <string name="Intravenous_threeWay_text">Type: Three Way</string>
 
 
 </resources>

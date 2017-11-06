@@ -15,4 +15,14 @@
     <string name="no_21">No. 21</string>
     <string name="no_24">No. 24</string>
     <string name="no_27">No. 27</string>
+    <string name="syr_3cc" translatable="false">Syringe 3CC</string>
+    <string name="syr_insu" translatable="false">Syringe Insulin</string>
+    <string name="dmpa" translatable="false">DMPA</string>
+    <string name="pvrv" translatable="false">PVRV</string>
+    <string name="insulin" translatable="false">Insulin</string>
+    <string name="complete_eqp">Please complete the equipment selection</string>
+    <string name="start_injection_process">Start Injection process</string>
+    <string name="result_title">Result</string>
+    <string name="equipment_preparation">Equipment preparation</string>
+    <string name="injection_proc">Injection process</string>
 </resources>

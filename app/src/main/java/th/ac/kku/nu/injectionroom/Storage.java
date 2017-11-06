@@ -4,13 +4,31 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
+ * This class is contain a lot of static content which provide data for this applications!
  * Created by nopph on 10/22/2017.
  */
 
 public class Storage {
 
+    public static final String SYRINGE_TYPE_KEY = "syrType" , THREE_CC_STR = "3cc" , INSULIN_SYRINGE_STR = "insulin";
+    public static final String BUNDLE_EQP = "Bundle_eqp";
+    public static final float ANGLE15_RATIO = (float) (2 - Math.sqrt(3));
+    public enum SYRINGE_TYPE{
+        THREE_CC , INSULIN_SYRINGE
+    }
+
+    public enum NEEDLE_NO{
+        NO_27 , NO_24 , NO_21
+    }
+
+    public enum DRUG_TYPE{
+        PVRV , DMPA , INSULIN
+    }
+
     public static String currentTaskTypeKey = "";
     public static Integer currentTaskNumber = 0;
+
+    public static final Double MAX_VOL_3CCML = 3.0, MAX_VOL_INSULIN_ML = 1.0;
 
     static public class Task{
         public static ArrayList<String> taskTypeKeyList = new ArrayList<>();
@@ -40,6 +58,34 @@ public class Storage {
             temp = new ArrayList<>();
             temp.add(R.string.task_sub_0);
             taskListResource.put(taskTypeKeyList.get(2),temp);
+
+            //Init score set
+            Score.initScoreSet();
+        }
+    }
+
+    static public class Score {
+        public static Integer[] scoreSet;
+        public static void initScoreSet(){
+            scoreSet = new Integer[Task.taskTypeKeyList.size()];
+        }
+    }
+
+    static public class InjectionProcess{
+        public static int totalPoint00 =0 , totalPoint10=0 , totalPoint20=0;
+        public static boolean glove = false , cottonAlc = false , injectCorrect = false , deptCorrect = false , useCotton = false;
+        public static boolean syringe = false , needleSize = false , drug=false;
+        public static int drugVolumn = 0;
+        public static void resetProcessMarks(){
+            glove = false;
+            cottonAlc = false;
+            injectCorrect = false;
+            deptCorrect = false;
+            useCotton = false;
+            syringe = false;
+            needleSize = false;
+            drug = false;
+            drugVolumn = 0;
         }
     }
 }

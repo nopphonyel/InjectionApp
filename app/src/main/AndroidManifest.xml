@@ -9,19 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SplashActivity"></activity>
-        <activity
-            android:name=".activity.game.SelectTask">
+        <activity android:name=".activity.SplashActivity" />
+        <activity android:name=".activity.game.SelectTask"></activity>
+        <activity android:name=".activity.game.TaskDetails" />
+        <activity android:name=".activity.game.SelectEquipment">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.game.TaskDetails" />
-        <activity android:name=".activity.game.SelectEquipment" />
-        <activity android:name=".activity.game.GameActivity" />
-        <activity android:name=".activity.TenR"></activity>
+        <activity android:name=".activity.game.GameActivity"></activity>
+        <activity android:name=".activity.TenR" />
+        <activity android:name=".activity.game.ResultActivity"></activity>
     </application>
 
 </manifest>

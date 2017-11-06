@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    tools:context="th.ac.kku.nu.injectionroom.activity.game.ResultActivity">
+
+    <ImageView
+        android:id="@+id/mascot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TitleTextView.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/result_title" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_sel_eqp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/eqp_prepa_title"
+                        style="@style/TitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/equipment_preparation" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/status_eqp_syr"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/eqp_prepa_title"
+                        android:src="@drawable/check_green" />
+
+                    <TextView
+                        android:id="@+id/eqp_syr"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/eqp_prepa_title"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/status_eqp_syr"
+                        android:text="Syringe" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/status_eqp_needle_num"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/eqp_syr"
+                        android:src="@drawable/check_green" />
+
+                    <TextView
+                        android:id="@+id/eqp_needle_num"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/status_eqp_needle_num"
+                        android:layout_below="@+id/eqp_syr"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/status_eqp_needle_num"
+                        android:text="Syringe" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/status_eqp_drug"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/eqp_needle_num"
+                        android:src="@drawable/check_green" />
+
+                    <TextView
+                        android:id="@+id/eqp_drug"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/eqp_needle_num"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/status_eqp_drug"
+                        android:text="Syringe" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/status_eqp_drug_volumn"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/eqp_drug"
+                        android:src="@drawable/check_green" />
+
+                    <TextView
+                        android:id="@+id/eqp_drug_volumn"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/eqp_drug"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/status_eqp_drug_volumn"
+                        android:text="Drug volumn" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_injection_proc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_sel_eqp"
+                android:layout_marginBottom="65dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/inject_proc_title"
+                        style="@style/TitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/injection_proc" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/status_glove"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/inject_proc_title"
+                        android:src="@drawable/check_green" />
+
+                    <TextView
+                        android:id="@+id/glove"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/inject_proc_title"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/status_glove"
+                        android:text="Syringe" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/status_cotton_alc"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/glove"
+                        android:src="@drawable/check_green" />
+
+                    <TextView
+                        android:id="@+id/cotton_alc"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/status_cotton_alc"
+                        android:layout_below="@+id/glove"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/status_cotton_alc"
+                        android:text="Syringe" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/status_inject"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/cotton_alc"
+                        android:src="@drawable/check_green" />
+
+                    <TextView
+                        android:id="@+id/inject"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cotton_alc"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/status_inject"
+                        android:text="Syringe" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/status_inject_dept"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/inject"
+                        android:src="@drawable/check_green" />
+
+                    <TextView
+                        android:id="@+id/inject_dept"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/inject"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/status_inject_dept"
+                        android:text="Syringe" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/status_cotton"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/cotton"
+                        android:src="@drawable/check_green" />
+
+                    <TextView
+                        android:id="@+id/cotton"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/inject_dept"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/status_cotton"
+                        android:text="Drug volumn" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        style="@style/BigButton.ActionPositive"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent" />
+
+</RelativeLayout>

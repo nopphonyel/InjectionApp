@@ -10,4 +10,9 @@
     <string name="no_21">เบอร์ 21</string>
     <string name="no_24">เบอร์ 24</string>
     <string name="no_27">เบอร์ 27</string>
+    <string name="complete_eqp">กรุณาเลือกอุปกรณ์ให้ครบถ้วน</string>
+    <string name="start_injection_process">เริ่มต้นการให้วัคซีน</string>
+    <string name="result_title">รายงานผล</string>
+    <string name="equipment_preparation">การเลือกอุปกรณ์</string>
+    <string name="injection_proc">ขั้นตอนการให้วัคซีน</string>
 </resources>

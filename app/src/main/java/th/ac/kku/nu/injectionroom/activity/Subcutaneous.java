@@ -6,7 +6,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
 import th.ac.kku.nu.injectionroom.R;
 
@@ -39,8 +38,7 @@ public class Subcutaneous extends AppCompatActivity {
         }
 
         sc_position = (ImageView)findViewById(R.id.sc_position);
-        GlideDrawableImageViewTarget sc_position_target = new GlideDrawableImageViewTarget(sc_position);
-        Glide.with(this).load(R.drawable.sc_position).into(sc_position_target);
+        Glide.with(this).load(R.drawable.sc_position).into(sc_position);
 
     }
 }

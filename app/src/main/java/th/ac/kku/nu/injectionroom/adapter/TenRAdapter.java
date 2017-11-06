@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
 import java.util.ArrayList;
 
@@ -77,8 +76,7 @@ public class TenRAdapter extends RecyclerView.Adapter<TenRAdapter.ViewHolder>  {
 
         holder.itemTitle.setText(titles[position]);
         holder.itemDetail.setText(details[position]);
-        GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(holder.itemImage);
-        Glide.with(context).load(images[position]).into(imageViewTarget);
+        Glide.with(context).load(images[position]).into(holder.itemImage);
     }
 
     @Override

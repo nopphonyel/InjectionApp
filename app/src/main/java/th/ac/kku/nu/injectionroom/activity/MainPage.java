@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
 import th.ac.kku.nu.injectionroom.R;
 import th.ac.kku.nu.injectionroom.activity.game.SelectTask;
@@ -24,12 +23,10 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.activity_main_page);
 
         syringe = (ImageView)findViewById(R.id.syringe_main);
-        GlideDrawableImageViewTarget syringe_target = new GlideDrawableImageViewTarget(syringe);
-        Glide.with(this).load(R.drawable.syringe).into(syringe_target);
+        Glide.with(this).load(R.drawable.syringe).into(syringe);
 
         nurse = (ImageView)findViewById(R.id.nurse_main);
-        GlideDrawableImageViewTarget nurse_target = new GlideDrawableImageViewTarget(nurse);
-        Glide.with(this).load(R.drawable.nurse_main).into(nurse_target);
+        Glide.with(this).load(R.drawable.nurse_main).into(nurse);
 
         tenR = (CardView)findViewById(R.id.ten_R);
         info = (CardView)findViewById(R.id.information);

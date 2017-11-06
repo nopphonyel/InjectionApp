@@ -72,10 +72,18 @@ public class Storage {
     }
 
     static public class InjectionProcess{
+        public static float MAXDEPT00 = (float)3.0 , MINDEPT00 = (float)2.0 ,
+                MAXDEPT20 = (float)25.4 , MINDEPT20 = (float)19.05 ,
+                MAXDEPT10 = (float)25.4 , MINDEPT10 = (float)19.05;
+        public static float DRUG_VOLUMN00 = (float) 0.1 , DRUG_VOLUMN10 = (float) 0.15 , DRUG_VOLUMN20 = (float) 0.1;
         public static int totalPoint00 =0 , totalPoint10=0 , totalPoint20=0;
+
         public static boolean glove = false , cottonAlc = false , injectCorrect = false , deptCorrect = false , useCotton = false;
-        public static boolean syringe = false , needleSize = false , drug=false;
-        public static int drugVolumn = 0;
+
+        public static boolean syringe = false , needleSize = false , drug=false , drugVolumeCorrect;
+        public static float drugVolumn = 0;
+
+        public static float dept = 0;
         public static void resetProcessMarks(){
             glove = false;
             cottonAlc = false;
@@ -86,6 +94,10 @@ public class Storage {
             needleSize = false;
             drug = false;
             drugVolumn = 0;
+            dept = 0;
+            totalPoint00 = 0;
+            totalPoint10 = 0;
+            totalPoint20 = 0;
         }
     }
 }

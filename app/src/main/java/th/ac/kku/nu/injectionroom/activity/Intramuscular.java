@@ -6,7 +6,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
 import th.ac.kku.nu.injectionroom.R;
 
@@ -43,27 +42,21 @@ public class Intramuscular extends AppCompatActivity {
         }
 
         im_1 = (ImageView)findViewById(R.id.im_1);
-        GlideDrawableImageViewTarget im_1_target = new GlideDrawableImageViewTarget(im_1);
-        Glide.with(this).load(R.drawable.im_1).into(im_1_target);
+        Glide.with(this).load(R.drawable.im_1).into(im_1);
 
         im_2 = (ImageView)findViewById(R.id.im_2);
-        GlideDrawableImageViewTarget im_2_target = new GlideDrawableImageViewTarget(im_2);
-        Glide.with(this).load(R.drawable.id_15).into(im_2_target);
+        Glide.with(this).load(R.drawable.id_15).into(im_2);
 
         im_3 = (ImageView)findViewById(R.id.im_3);
-        GlideDrawableImageViewTarget im_3_target = new GlideDrawableImageViewTarget(im_3);
-        Glide.with(this).load(R.drawable.im_3).into(im_3_target);
+        Glide.with(this).load(R.drawable.im_3).into(im_3);
 
         im_4 = (ImageView)findViewById(R.id.im_4);
-        GlideDrawableImageViewTarget im_4_target = new GlideDrawableImageViewTarget(im_4);
-        Glide.with(this).load(R.drawable.im_4).into(im_4_target);
+        Glide.with(this).load(R.drawable.im_4).into(im_4);
 
         im_90 = (ImageView)findViewById(R.id.im_90);
-        GlideDrawableImageViewTarget im_90_target = new GlideDrawableImageViewTarget(im_90);
-        Glide.with(this).load(R.drawable.im_90).into(im_90_target);
+        Glide.with(this).load(R.drawable.im_90).into(im_90);
 
         im_z = (ImageView)findViewById(R.id.im_z);
-        GlideDrawableImageViewTarget im_z_target = new GlideDrawableImageViewTarget(im_z);
-        Glide.with(this).load(R.drawable.im_z).into(im_z_target);
+        Glide.with(this).load(R.drawable.im_z).into(im_z);
     }
 }

@@ -64,6 +64,7 @@ public class SelectEquipment extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick() {
+        Storage.InjectionProcess.drugVolumn = syringeAdjustorDialog.getVolumn();
         syringeAdjustorDialog.dismiss();
         sendingEqp = new Bundle();
         if(currentSelectedSyringe == Storage.SYRINGE_TYPE.THREE_CC) {
@@ -124,7 +125,7 @@ public class SelectEquipment extends AppCompatActivity implements View.OnClickLi
     }
 
     private void commitPTS(){
-        if(Storage.currentTaskTypeKey == Storage.Task.taskTypeKeyList.get(0)){
+        if(Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(0))){
             if(currentSelectedSyringe == Storage.SYRINGE_TYPE.INSULIN_SYRINGE){
                 Storage.InjectionProcess.totalPoint00++;
                 Storage.InjectionProcess.syringe = true;
@@ -138,7 +139,7 @@ public class SelectEquipment extends AppCompatActivity implements View.OnClickLi
                 Storage.InjectionProcess.drug =true;
             }
         }
-        if(Storage.currentTaskTypeKey == Storage.Task.taskTypeKeyList.get(1)){
+        if(Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(1))){
             if(currentSelectedSyringe == Storage.SYRINGE_TYPE.THREE_CC){
                 Storage.InjectionProcess.totalPoint10++;
                 Storage.InjectionProcess.syringe = true;
@@ -152,7 +153,7 @@ public class SelectEquipment extends AppCompatActivity implements View.OnClickLi
                 Storage.InjectionProcess.drug =true;
             }
         }
-        if(Storage.currentTaskTypeKey == Storage.Task.taskTypeKeyList.get(2)){
+        if(Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(2))){
             if(currentSelectedSyringe == Storage.SYRINGE_TYPE.INSULIN_SYRINGE){
                 Storage.InjectionProcess.totalPoint20++;
                 Storage.InjectionProcess.syringe = true;

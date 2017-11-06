@@ -24,6 +24,7 @@ import th.ac.kku.nu.injectionroom.Storage;
 public class SyringeAdjustorDialog extends DialogFragment implements View.OnClickListener {
 
     private static Storage.SYRINGE_TYPE thisSyringeType;
+    private float volumn=0;
 
     public static SyringeAdjustorDialog newInstance(Storage.SYRINGE_TYPE syringeType){
         thisSyringeType = syringeType;
@@ -71,7 +72,8 @@ public class SyringeAdjustorDialog extends DialogFragment implements View.OnClic
         compatSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                Double currentML = progress/100.0;
+                float currentML = (float) (progress/100.0);
+                volumn = currentML;
                 String currentProgress = currentML+" ml.";
                 syringeValue.setText(currentProgress);
             }
@@ -99,5 +101,9 @@ public class SyringeAdjustorDialog extends DialogFragment implements View.OnClic
         if(v == confirmSyringeVolumn){
             onClickConfirmAdjustDialog.onClick();
         }
+    }
+
+    public float getVolumn(){
+        return volumn;
     }
 }

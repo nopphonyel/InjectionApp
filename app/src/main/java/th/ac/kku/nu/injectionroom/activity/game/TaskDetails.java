@@ -17,6 +17,7 @@ public class TaskDetails extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_details);
         initializeComponent();
+        Storage.InjectionProcess.resetProcessMarks();
         getIntentData();
         setData();
     }

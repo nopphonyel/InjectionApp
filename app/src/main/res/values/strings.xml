@@ -1,4 +1,4 @@
-    <resources>
+<resources>
     <string name="app_name">Injection Room</string>
     <string name="select_task">Select Task</string>
     <string name="intradermal" translatable="false">Intradermal</string>
@@ -41,7 +41,7 @@
     <string name="detail_ten_r_8">\t\t\t\tBefore you administer, please explain about patient’s right, benefit and side effects of drug. The patient can refuse or accept it.</string>
     <string name="detail_ten_r_9">\t\t\t\tCheck the medicine’s interaction with other drugs, and drugs with foods that affect to effective treatment.</string>
     <string name="detail_ten_r_10">\t\t\t\tExplain to patient about their drugs and observe side effects of drugs.</string>
-    
+
     <string name="intradermal_type">Intradermal injection, ID</string>
     <string name="intradermal_info">ฉีดเข้าไปในชั้นหนังแท้ซึ่งอยู่ใต้ชั้นหนังกำพร้า ปริมาณยาที่ฉีดไม่เกิน 0.3 มล.</string>
     <string-array name="intradermal_purpose">
@@ -285,4 +285,31 @@
     <string name="result_title">Result</string>
     <string name="equipment_preparation">Equipment preparation</string>
     <string name="injection_proc">Injection process</string>
+    <string name="dept">Dept :</string>
+    <string name="mm">mm.</string>
+    <string name="finish_inject">Finish injection</string>
+    <string name="finish_clean">Finish clean</string>
+
+    <string name="select_result_syringe">Syringe selection. Correct</string>
+    <string name="select_result_needle_num">Needle NO. selection. Correct</string>
+    <string name="select_result_drug">Drug selection. Correct</string>
+    <string name="select_result_drug_volumn">Volume of drug. Correct</string>
+
+    <string name="inject_result_glove">Wear gloves before proceed</string>
+    <string name="inject_result_cotton_alc">Use cotton with alcohol for cleaning</string>
+    <string name="inject_result_injection">Injection with right angle</string>
+    <string name="inject_result_injection_dept">Injection with right dept</string>
+    <string name="inject_result_injection_cotton">Use cotton on injection spot</string>
+
+    <string name="select_result_syringe_x">Syringe selection. Incorrect</string>
+    <string name="select_result_needle_num_x">Needle NO. selection. Incorrect</string>
+    <string name="select_result_drug_x">Drug selection. Incorrect</string>
+    <string name="select_result_drug_volumn_x">Volume of drug. Incorrect</string>
+
+    <string name="inject_result_glove_x">No gloves are ware before proceed</string>
+    <string name="inject_result_cotton_alc_x">Proceed without cleaning with alcohol</string>
+    <string name="inject_result_injection_x">Incorrect injection angle</string>
+    <string name="inject_result_injection_dept_x">Incorrect injection dept</string>
+    <string name="inject_result_injection_cotton_x">No cotton on injection spot</string>
+    <string name="return_menu">Return to main menu</string>
 </resources>

@@ -10,39 +10,40 @@
         android:id="@+id/skin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/control_button"
-        android:scaleType="centerCrop"
-         />
+        android:layout_below="@+id/control_button"
+        android:scaleType="centerCrop" />
 
     <ImageView
-        android:id="@+id/dark_skin"
-        android:src="@drawable/small_dark_skin"
+        android:layout_below="@+id/control_button"
+        android:visibility="gone"
+        android:id="@+id/cotton_on_skin"
         android:scaleType="centerCrop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <ImageView
         android:id="@+id/hand_style"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/control_button"
-        android:scaleType="centerCrop"
-         />
+        android:scaleType="centerCrop" />
 
     <ImageView
         android:id="@+id/syringe"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/control_button"
-        android:layout_centerVertical="true"/>
+        android:layout_below="@+id/control_button"
+        android:layout_centerVertical="true" />
 
     <ImageView
+        android:visibility="gone"
         android:id="@+id/mask"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/control_button"
-        android:scaleType="centerCrop"
-         />
+        android:layout_below="@+id/control_button"
+        android:scaleType="centerCrop" />
 
     <HorizontalScrollView
         android:id="@+id/control_button"
@@ -67,28 +68,43 @@
                 style="@style/each_control_size" />
 
             <ImageButton
-                android:id="@+id/btn_plaster"
-                style="@style/each_control_size" />
-
-            <ImageButton
                 android:id="@+id/btn_cot_no_alc"
                 style="@style/each_control_size" />
 
         </LinearLayout>
     </HorizontalScrollView>
 
-    <ImageView
+    <RelativeLayout
         android:id="@+id/cotton_alc_control"
-        android:layout_below="@id/control_button"
+        android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/control_button">
+
+        <th.ac.kku.nu.injectionroom.customComponent.PaintView
+            android:id="@+id/paint_alc"
+            android:alpha="0.3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:alpha="0.3"
+            android:enabled="false"
+            android:id="@+id/btn_finish_cleaning"
+            style="@style/BigButton.ActionPositive"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:text="@string/finish_clean"
+            android:textColor="@color/pureWhite" />
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/injection_control"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/control_button">
+        android:layout_below="@+id/control_button"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/angle_control"
@@ -101,56 +117,70 @@
                 android:id="@+id/a15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="15"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:text="15" />
 
             <Button
                 android:id="@+id/a45"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="45"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:text="45" />
 
             <Button
                 android:id="@+id/a90"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="90"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:text="90" />
         </LinearLayout>
+
         <android.support.v7.widget.AppCompatSeekBar
             android:id="@+id/syringe_dept_adj"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@id/btn_inject"/>
+            android:layout_above="@+id/btn_inject" />
+
         <Button
             android:id="@+id/btn_inject"
-            android:text="INJECT"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
             style="@style/BigButton.ActionPositive"
-            />
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:text="INJECT"
+            android:textColor="@color/pureWhite" />
+
         <TextView
             android:id="@+id/dept_value"
-            android:text="Dept"
-            android:layout_centerHorizontal="true"
-            android:layout_above="@id/syringe_dept_adj"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/syringe_dept_adj"
+            android:layout_centerHorizontal="true"
+            android:text="DEPT:" />
     </RelativeLayout>
 
-    <View
+    <RelativeLayout
+        android:visibility="gone"
         android:id="@+id/cotton_no_control"
-        android:visibility="gone"
-        android:layout_below="@id/control_button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/control_button">
 
-    <View
-        android:id="@+id/plaster_control"
-        android:visibility="gone"
-        android:layout_below="@id/control_button"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        <View
+            android:id="@+id/cotton_no_alc_clickable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_finish_inject"
+            android:enabled="false"
+            android:alpha="0.3"
+            style="@style/BigButton.ActionPositive"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:text="@string/finish_inject"
+            android:textColor="@color/pureWhite" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -271,4 +271,31 @@
     <string name="Intravenous_IVSet_text">ประเภท: ผ่านชุดให้สารละลาย</string>
     <string name="Intravenous_soluSet_text">ประเภท: ผ่านกระเปาะยา</string>
     <string name="Intravenous_threeWay_text">ประเภท: Three Way</string>
+    <string name="dept">"ความลึก : "</string>
+    <string name="mm">มม.</string>
+    <string name="finish_inject">เสร็จสิ้นกระบวนการให้วัคซีน</string>
+    <string name="finish_clean">เสร็จสิ้นการทำความสะอาด</string>
+
+    <string name="select_result_syringe">การเลือกหลอดไซริง ถูกต้อง</string>
+    <string name="select_result_needle_num">การเลือกขนาดของเข็ม ถูกต้อง</string>
+    <string name="select_result_drug">เลือกยา ถูกต้อง</string>
+    <string name="select_result_drug_volumn">ปริมาณของยา ถูกต้อง</string>
+
+    <string name="inject_result_glove">มีการใส่ถุงมือก่อนปฏิบัติงาน</string>
+    <string name="inject_result_cotton_alc">มีการใช้สำลีชุบแอลกอฮอล์ในการทำความสะอาด</string>
+    <string name="inject_result_injection">ให้วัคซีนด้วยมุมที่ถูกต้อง</string>
+    <string name="inject_result_injection_dept">ความลึกถูกต้อง</string>
+    <string name="inject_result_injection_cotton">มีการใช้สำลีปิดจุดที่ให้วัคซีน</string>
+
+    <string name="select_result_syringe_x">การเลือกหลอดไซริง ไม่ถูกต้อง</string>
+    <string name="select_result_needle_num_x">การเลือกขนาดของเข็ม ไม่ถูกต้อง</string>
+    <string name="select_result_drug_x">เลือกยา ไม่ถูกต้อง</string>
+    <string name="select_result_drug_volumn_x">ปริมาณของยา ไม่ถูกต้อง</string>
+
+    <string name="inject_result_glove_x">ไม่มีการใส่ถุงมือก่อนปฏิบัติงาน</string>
+    <string name="inject_result_cotton_alc_x">ไม่มีการใช้สำลีชุบแอลกอฮอล์ในการทำความสะอาด</string>
+    <string name="inject_result_injection_x">ให้วัคซีนด้วยมุมที่ไม่ถูกต้อง</string>
+    <string name="inject_result_injection_dept_x">ความลึกไม่ถูกต้อง</string>
+    <string name="inject_result_injection_cotton_x">ไม่มีการใช้สำลีปิดจุดที่ให้วัคซีน</string>
+    <string name="return_menu">กลับหน้าหลัก</string>
 </resources>

@@ -6,7 +6,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
 import th.ac.kku.nu.injectionroom.R;
 
@@ -34,7 +33,6 @@ public class IntravenousNormalSalineLock extends AppCompatActivity {
         }
 
         position = (ImageView)findViewById(R.id.intravenous_normalSalineLock_position);
-        GlideDrawableImageViewTarget img_target = new GlideDrawableImageViewTarget(position);
-        Glide.with(this).load(R.drawable.normalsaline).into(img_target);
+        Glide.with(this).load(R.drawable.normalsaline).into(position);
     }
 }

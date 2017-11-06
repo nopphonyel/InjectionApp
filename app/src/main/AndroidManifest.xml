@@ -9,19 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SplashActivity" />
-        <activity android:name=".activity.game.SelectTask"></activity>
-        <activity android:name=".activity.game.TaskDetails" />
-        <activity android:name=".activity.game.SelectEquipment">
+        <activity android:name=".activity.MainPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.game.GameActivity"></activity>
-        <activity android:name=".activity.TenR" />
-        <activity android:name=".activity.game.ResultActivity"></activity>
+        <activity android:name=".activity.game.TaskDetails" />
+        <activity android:name=".activity.game.SelectEquipment" />
+        <activity android:name=".activity.game.GameActivity" />
+        <activity android:name=".activity.TenR"/>
+        <activity android:name=".activity.SplashActivity" />
+        <activity android:name=".activity.Intramuscular" />
+        <activity android:name=".activity.InjectionType" />
+        <activity android:name=".activity.game.SelectTask" />
+        <activity android:name=".activity.Intradermal" />
+        <activity android:name=".activity.Subcutaneous" />
+        <activity android:name=".activity.IntravenousDirect" />
+        <activity android:name=".activity.IntravenousHeparin" />
+        <activity android:name=".activity.IntravenousNormalSalineLock" />
+        <activity android:name=".activity.IntravenousIVSet" />
+        <activity android:name=".activity.IntravenousSoluSet" />
+        <activity android:name=".activity.IntravenousThreeWay"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="th.ac.kku.nu.injectionroom.activity.InjectionType">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/inject_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:paddingBottom="10dp"
+                android:text="@string/injection_position"
+                android:textSize="40sp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/intradermal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="12dp"
+                card_view:cardElevation="3dp"
+                card_view:contentPadding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/Intradermal_text"
+                    android:textSize="30sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/subcutaneous"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="12dp"
+                card_view:cardElevation="3dp"
+                card_view:contentPadding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/Subcutaneous_text"
+                    android:textSize="30sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/intramuscular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="12dp"
+                card_view:cardElevation="3dp"
+                card_view:contentPadding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/Intramuscular_text"
+                    android:textSize="30sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/intravenous"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardCornerRadius="12dp"
+                card_view:cardElevation="3dp"
+                card_view:contentPadding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/Intravenous_text"
+                    android:textSize="30sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/intravenous_direct"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="3dp"
+                card_view:contentPadding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/Intravenous_direct_text"
+                    android:textSize="22sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:visibility="gone"
+                android:layout_marginTop="2dp"
+                android:id="@+id/intravenous_heparinLock"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="3dp"
+                card_view:contentPadding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/Intravenous_heparinLock_text"
+                    android:textSize="22sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="2dp"
+                android:visibility="gone"
+                android:id="@+id/intravenous_normalSalineLock"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="3dp"
+                card_view:contentPadding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/Intravenous_normalSaline_text"
+                    android:textSize="22sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="2dp"
+                android:visibility="gone"
+                android:id="@+id/intravenous_soluSet"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="3dp"
+                card_view:contentPadding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/Intravenous_soluSet_text"
+                    android:textSize="22sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="2dp"
+                android:visibility="gone"
+                android:id="@+id/intravenous_IVSet"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="3dp"
+                card_view:contentPadding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/Intravenous_IVSet_text"
+                    android:textSize="22sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="2dp"
+                android:visibility="gone"
+                android:id="@+id/intravenous_threeWay"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="3dp"
+                card_view:contentPadding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/Intravenous_threeWay_text"
+                    android:textSize="22sp" />
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

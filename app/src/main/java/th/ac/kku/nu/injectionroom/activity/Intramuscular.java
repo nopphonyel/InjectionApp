@@ -45,7 +45,7 @@ public class Intramuscular extends AppCompatActivity {
         Glide.with(this).load(R.drawable.im_1).into(im_1);
 
         im_2 = (ImageView)findViewById(R.id.im_2);
-        Glide.with(this).load(R.drawable.id_15).into(im_2);
+        Glide.with(this).load(R.drawable.im_2).into(im_2);
 
         im_3 = (ImageView)findViewById(R.id.im_3);
         Glide.with(this).load(R.drawable.im_3).into(im_3);

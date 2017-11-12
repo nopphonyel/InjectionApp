@@ -63,10 +63,10 @@ public class SyringeAdjustorDialog extends DialogFragment implements View.OnClic
     AppCompatSeekBar compatSeekBar;
     private void addListener(){
         if(thisSyringeType == Storage.SYRINGE_TYPE.THREE_CC) {
-            compatSeekBar.setMax(300);
+            compatSeekBar.setMax((int) (Storage.MAX_VOL_3CCML*100));
         }
         if(thisSyringeType == Storage.SYRINGE_TYPE.INSULIN_SYRINGE) {
-            compatSeekBar.setMax(100);
+            compatSeekBar.setMax((int) (Storage.MAX_VOL_INSULIN_ML*100));
         }
         confirmSyringeVolumn.setOnClickListener(this);
         compatSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {

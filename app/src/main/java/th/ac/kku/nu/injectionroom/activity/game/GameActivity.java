@@ -292,13 +292,13 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
         if(Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(1))){
-            if(currentAngle == A45){
+            if(currentAngle == A90){
                 Storage.InjectionProcess.totalPoint10++;
                 Storage.InjectionProcess.injectCorrect = true;
             }
         }
         if(Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(2))){
-            if(currentAngle == A90){
+            if(currentAngle == A45){
                 Storage.InjectionProcess.totalPoint20++;
                 Storage.InjectionProcess.injectCorrect = true;
             }

@@ -4,7 +4,7 @@
     <string name="intradermal" translatable="false">Intradermal</string>
     <string name="intramuscular" translatable="false">Intramuscular</string>
     <string name="subcutaneous" translatable="false">Subcutaneous</string>
-    <string name="task_intradermal_0" translatable="false">Vaccine PVRV 0.1 m; ID</string>
+    <string name="task_intradermal_0" translatable="false">Vaccine PVRV 0.1 ml ID</string>
     <string name="task_intramus_0" translatable="false">DMPA 150 mg IM</string>
     <string name="task_sub_0" translatable="false">Regular insulin 10 IU S.C q 4 hr</string>
     <string name="start_task">Start task</string>

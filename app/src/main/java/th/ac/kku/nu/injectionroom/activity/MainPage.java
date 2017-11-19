@@ -1,6 +1,7 @@
 package th.ac.kku.nu.injectionroom.activity;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -14,8 +15,9 @@ import th.ac.kku.nu.injectionroom.activity.game.SelectTask;
 
 public class MainPage extends AppCompatActivity implements View.OnClickListener{
 
-    ImageView syringe,nurse;
+    ImageView syringe,nurse,iconName;
     CardView tenR,info,game;
+    Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +30,34 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener{
         nurse = (ImageView)findViewById(R.id.nurse_main);
         Glide.with(this).load(R.drawable.nurse_main).into(nurse);
 
+        iconName = (ImageView)findViewById(R.id.icon_name_main);
+        Glide.with(this).load(R.drawable.iconname).into(iconName);
+
         tenR = (CardView)findViewById(R.id.ten_R);
         info = (CardView)findViewById(R.id.information);
         game = (CardView)findViewById(R.id.play_game);
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                tenR.setVisibility(View.VISIBLE);
+            }
+        }, 1000);
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                info.setVisibility(View.VISIBLE);
+            }
+        }, 2000);
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                game.setVisibility(View.VISIBLE);
+            }
+        }, 3000);
+
         tenR.setOnClickListener(this);
         info.setOnClickListener(this);
         game.setOnClickListener(this);

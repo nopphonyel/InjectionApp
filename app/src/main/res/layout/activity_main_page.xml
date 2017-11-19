@@ -7,29 +7,28 @@
     android:layout_height="match_parent"
     tools:context="th.ac.kku.nu.injectionroom.activity.MainPage">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:layout_above="@id/syringe_main"
-            android:id="@+id/app_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="@string/app_name"
-            android:textSize="40sp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_above="@id/ten_R"
-            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/icon_name_main"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"/>
+        <ImageView
+            android:layout_gravity="center_horizontal"
             android:id="@+id/syringe_main"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="5dp"/>
 
         <android.support.v7.widget.CardView
-            android:layout_above="@id/information"
+            android:visibility="invisible"
+            android:layout_gravity="center_horizontal"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:id="@+id/ten_R"
@@ -51,7 +50,8 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:layout_gravity="center_horizontal"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
@@ -74,7 +74,9 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_below="@id/information"
+            android:visibility="invisible"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
@@ -97,12 +99,12 @@
         </android.support.v7.widget.CardView>
 
         <ImageView
-            android:layout_below="@id/play_game"
-            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="right"
             android:id="@+id/nurse_main"
             android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginBottom="10dp" />
-    </RelativeLayout>
+            android:layout_height="200dp" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

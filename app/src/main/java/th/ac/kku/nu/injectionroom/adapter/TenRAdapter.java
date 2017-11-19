@@ -77,6 +77,7 @@ public class TenRAdapter extends RecyclerView.Adapter<TenRAdapter.ViewHolder>  {
         holder.itemTitle.setText(titles[position]);
         holder.itemDetail.setText(details[position]);
         Glide.with(context).load(images[position]).into(holder.itemImage);
+
     }
 
     @Override
@@ -88,6 +89,7 @@ public class TenRAdapter extends RecyclerView.Adapter<TenRAdapter.ViewHolder>  {
 
     public TenRAdapter(Context mContext) {
         this.context = mContext;
+        notifyDataSetChanged();
     }
 
 }

@@ -7,6 +7,11 @@
     android:layout_height="match_parent"
     tools:context="th.ac.kku.nu.injectionroom.activity.MainPage">
 
+    <ImageView
+        android:src="@drawable/blue2"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -106,15 +111,20 @@
             <Switch
                 android:id="@+id/sw"
                 android:layout_marginLeft="20dp"
-                android:textOn="ไทย"
+                android:textOn="EN/TH"
                 style="@style/SelectionSwitch"
                 android:textSize="20sp"
-                android:textOff="Eng"
+                android:textOff="EN/TH"
+                android:textAllCaps="false"
                 android:layout_marginTop="15dp"
                 android:paddingLeft="15dp"
-                android:thumb="@color/cardview_light_background"
-                android:track="@color/cardview_light_background"
+                android:thumb="@color/colorPrimary"
+                android:track="@color/colorPrimary"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="15dp"
                 android:showText="true"
+                android:textColor="@android:color/white"
                 android:background="@color/colorPrimary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

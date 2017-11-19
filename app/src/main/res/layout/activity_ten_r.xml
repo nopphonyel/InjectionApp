@@ -20,9 +20,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:orientation="vertical">
+        >
+        <Switch
+            android:id="@+id/sw"
+            android:textOn="EN/TH"
+            style="@style/SelectionSwitch"
+            android:textSize="20sp"
+            android:textOff="EN/TH"
+            android:textAllCaps="false"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="15dp"
+            android:thumb="@color/colorPrimary"
+            android:track="@color/colorPrimary"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="15dp"
+            android:showText="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/sw"
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

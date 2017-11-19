@@ -10,6 +10,7 @@ import java.util.HashMap;
 
 public class Storage {
 
+    public static int checkLanguage = 0;
     public static final String SYRINGE_TYPE_KEY = "syrType" , THREE_CC_STR = "3cc" , ONE_CC_STR = "1cc" , INSULIN_SYRINGE_STR = "insulin";
     public static final String BUNDLE_EQP = "Bundle_eqp";
     public static final float ANGLE15_RATIO = (float) (2 - Math.sqrt(3));

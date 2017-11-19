@@ -10,15 +10,15 @@ import java.util.HashMap;
 
 public class Storage {
 
-    public static final String SYRINGE_TYPE_KEY = "syrType" , THREE_CC_STR = "3cc" , INSULIN_SYRINGE_STR = "insulin";
+    public static final String SYRINGE_TYPE_KEY = "syrType" , THREE_CC_STR = "3cc" , ONE_CC_STR = "1cc" , INSULIN_SYRINGE_STR = "insulin";
     public static final String BUNDLE_EQP = "Bundle_eqp";
     public static final float ANGLE15_RATIO = (float) (2 - Math.sqrt(3));
     public enum SYRINGE_TYPE{
-        THREE_CC , INSULIN_SYRINGE
+        THREE_CC , ONE_CC , INSULIN_SYRINGE
     }
 
     public enum NEEDLE_NO{
-        NO_27 , NO_24 , NO_21
+        NO_27 , NO_26 , NO_25 , NO_24 , NO_23 , NO_22 , NO_21
     }
 
     public enum DRUG_TYPE{
@@ -28,7 +28,7 @@ public class Storage {
     public static String currentTaskTypeKey = "";
     public static Integer currentTaskNumber = 0;
 
-    public static final Double MAX_VOL_3CCML = 3.0, MAX_VOL_INSULIN_ML = 1.0;
+    public static final Double MAX_VOL_3ML = 3.0, MAX_VOL_1ML = 1.0 , MAX_VOL_INSULIN = 1.0;
 
     static public class Task{
         public static ArrayList<String> taskTypeKeyList = new ArrayList<>();
@@ -73,9 +73,9 @@ public class Storage {
 
     static public class InjectionProcess{
         public static float MAXDEPT00 = (float)3.0 , MINDEPT00 = (float)2.0 ,
-                MAXDEPT20 = (float)25.4 , MINDEPT20 = (float)19.05 ,
-                MAXDEPT10 = (float)25.4 , MINDEPT10 = (float)19.05;
-        public static float DRUG_VOLUMN00 = (float) 1.0 , DRUG_VOLUMN10 = (float) 0.15 , DRUG_VOLUMN20 = (float) 0.1;
+                MAXDEPT20 = (float)17.00 , MINDEPT20 = (float)15.00 ,
+                MAXDEPT10 = (float)20.00 , MINDEPT10 = (float)18.00;
+        public static float DRUG_VOLUMN00 = (float) 0.1 , DRUG_VOLUMN10 = (float) 1.0 , DRUG_VOLUMN20 = (float) 0.1;
         public static int totalPoint00 =0 , totalPoint10=0 , totalPoint20=0;
 
         public static boolean glove = false , cottonAlc = false , injectCorrect = false , deptCorrect = false , useCotton = false;

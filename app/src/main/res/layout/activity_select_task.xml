@@ -4,23 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="5dp"
-    android:paddingRight="5dp"
     tools:context="th.ac.kku.nu.injectionroom.activity.game.SelectTask">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_margin="10dp"
-        android:text="@string/select_task"
-        style="@style/TitleTextView.Large"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/menu_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ic_back"
+            style="@style/backBtn"
+            android:layout_margin="3dp"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/ic_back"
+            android:text="@string/select_task"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:layout_below="@+id/title"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:id="@+id/task_type_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/menu_panel" />
 
 
 </RelativeLayout>

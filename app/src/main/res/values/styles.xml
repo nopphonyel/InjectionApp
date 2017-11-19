@@ -32,6 +32,12 @@
 
     <style name="BigButton.ActionPositive" parent="BigButton">
         <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/pureWhite</item>
+    </style>
+
+    <style name="BigButton.ActionSecondaryPositive" parent="BigButton">
+        <item name="android:backgroundTint">@color/pureWhite</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
     <style name="each_control_size">
@@ -46,6 +52,12 @@
 
     <style name="InformationContents">
         <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="backBtn">
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
     </style>
 
 </resources>

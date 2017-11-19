@@ -299,4 +299,11 @@
     <string name="inject_result_injection_dept_x">ความลึกไม่ถูกต้อง</string>
     <string name="inject_result_injection_cotton_x">ไม่มีการใช้สำลีปิดจุดที่ให้วัคซีน</string>
     <string name="return_menu">กลับหน้าหลัก</string>
+    <string name="no_22">เบอร์ 22</string>
+    <string name="no_23">เบอร์ 23</string>
+    <string name="no_25">เบอร์ 25</string>
+    <string name="no_26">เบอร์ 26</string>
+    <string name="play_again">เล่นอีกครั้ง</string>
+    <string name="back">ย้อนกลับ</string>
+    <string name="select_needle_size_unavi">ใช้หัวเข็มที่ติดมากับ Syringe</string>
 </resources>

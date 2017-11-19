@@ -35,8 +35,8 @@ public class ResultActivity extends AppCompatActivity {
     TextView eqpSyr, eqpNeedleNum, eqpDrug, eqpDrugVolumn;
     TextView glove, cottonAlc, injection, dept, cottonNoAlc;
     TextView pts;
-    Button returnToMenu;
-    Intent intent;
+    Button returnToMenu , playAgain;
+    Intent intent , intentPlayAgain;
 
     private void initComponent() {
         pts = (TextView) findViewById(R.id.pts);
@@ -65,12 +65,24 @@ public class ResultActivity extends AppCompatActivity {
 
         intent = new Intent(this , MainPage.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        intentPlayAgain = new Intent(this, SelectTask.class);
+        intentPlayAgain.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        playAgain = (Button) findViewById(R.id.play_again);
+        playAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Storage.InjectionProcess.resetProcessMarks();
+                startActivity(intentPlayAgain);
+            }
+        });
         returnToMenu = (Button) findViewById(R.id.return_to_menu);
         returnToMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Storage.InjectionProcess.resetProcessMarks();
                 startActivity(intent);
+                finish();
             }
         });
     }
@@ -78,7 +90,7 @@ public class ResultActivity extends AppCompatActivity {
     private void updateResult() {
         String ptsString = "";
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(0))) {
-            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN00 + 0.01 && Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN00 - 0.01) {
+            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN00 && Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN00) {
                 Storage.InjectionProcess.drugVolumeCorrect = true;
                 Storage.InjectionProcess.totalPoint00++;
             }
@@ -89,7 +101,7 @@ public class ResultActivity extends AppCompatActivity {
             ptsString = Storage.InjectionProcess.totalPoint00 + "/" + 9;
         }
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(1))) {
-            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN10 + 0.01 && Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN10 - 0.01) {
+            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN10 && Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN10) {
                 Storage.InjectionProcess.drugVolumeCorrect = true;
                 Storage.InjectionProcess.totalPoint10++;
             }
@@ -100,7 +112,7 @@ public class ResultActivity extends AppCompatActivity {
             ptsString = Storage.InjectionProcess.totalPoint10 + "/" + 9;
         }
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(2))) {
-            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN20 + 0.01 && Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN20 - 0.01) {
+            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN20 && Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN20) {
                 Storage.InjectionProcess.drugVolumeCorrect = true;
                 Storage.InjectionProcess.totalPoint20++;
             }

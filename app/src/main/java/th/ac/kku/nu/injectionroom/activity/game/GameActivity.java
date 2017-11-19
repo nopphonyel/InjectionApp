@@ -46,20 +46,20 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     Paint paint;
 
     ImageButton btnGlove, btnCotton, btnSyringe, btnCotNoAlc;
-    Button btnA15, btnA45, btnA90, btnInject , btnFinishCleaning , btnFinishInject;
-    ImageView skin, handStyle, syringe, mask , cottonOnSkin;
+    Button btnA15, btnA45, btnA90, btnInject, btnFinishCleaning, btnFinishInject;
+    ImageView skin, handStyle, syringe, mask, cottonOnSkin;
     RelativeLayout cottonAlcControl;
     RequestOptions centerCrop, fitCenter;
     RelativeLayout injectionControl;
     TextView dept;
     PaintView alcPainter;
     RelativeLayout cottonNoAlcClickable;
-    Animation alcFadeOut , injectionControlFade , syringeSlide;
+    Animation alcFadeOut, injectionControlFade, syringeSlide;
 
     AppCompatSeekBar adjustDeptSyringe;
 
     enum CURRENT_EQUIP {
-        COTTON_WITH_ALC, COTTON_NO_ALC, SYRINGE , NONE
+        COTTON_WITH_ALC, COTTON_NO_ALC, SYRINGE, NONE
     }
 
     enum SYRINGE_ANGLE {
@@ -108,9 +108,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         alcPainter.init(metrics);
         alcPainter.blur();
 
-        alcFadeOut = AnimationUtils.loadAnimation(this , R.anim.fade_alc);
-        injectionControlFade = AnimationUtils.loadAnimation(this , R.anim.fade_alc);
-        syringeSlide = AnimationUtils.loadAnimation(this , R.anim.fade_syringe_and_move_out);
+        alcFadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_alc);
+        injectionControlFade = AnimationUtils.loadAnimation(this, R.anim.fade_alc);
+        syringeSlide = AnimationUtils.loadAnimation(this, R.anim.fade_syringe_and_move_out);
 
         cottonNoAlcClickable = (RelativeLayout) findViewById(R.id.cotton_no_control);
 
@@ -137,7 +137,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     int prevValue = 0, diffValue = 0;
-    float cottonAlcX = 0 , cottonAlcY =0;
+    float cottonAlcX = 0, cottonAlcY = 0;
 
     private void addListener() {
         btnGlove.setOnClickListener(this);
@@ -164,10 +164,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 prevValue = progress;
             }
+
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar){}
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
         btnA15.setOnClickListener(this);
         btnA45.setOnClickListener(this);
@@ -180,7 +184,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         alcPainter.setOnFirstTouchPaintListener(new PaintView.OnFirstTouchPaint() {
             @Override
             public void onFirstTouch() {
-                Log.d(TAG , "TRIGGERED");
+                Log.d(TAG, "TRIGGERED");
                 btnFinishCleaning.setAlpha((float) 1.0);
                 btnFinishCleaning.setEnabled(true);
             }
@@ -188,8 +192,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         cottonNoAlcClickable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG , "TRIGGERED");
-                btnFinishInject.setAlpha((float)1.0);
+                Log.d(TAG, "TRIGGERED");
+                btnFinishInject.setAlpha((float) 1.0);
                 btnFinishInject.setEnabled(true);
                 cottonOnSkin.setVisibility(View.VISIBLE);
             }
@@ -213,33 +217,33 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             updateState(1);
         }
         if (v == btnSyringe) {
-            if(currentEquip == CURRENT_EQUIP.NONE) {
+            if (currentEquip == CURRENT_EQUIP.NONE) {
                 selectBtn(CURRENT_EQUIP.SYRINGE);
-            }else {
+            } else {
                 selectBtn(CURRENT_EQUIP.NONE);
             }
         }
         if (v == btnCotton) {
-            if(currentEquip == CURRENT_EQUIP.NONE) {
+            if (currentEquip == CURRENT_EQUIP.NONE) {
                 selectBtn(CURRENT_EQUIP.COTTON_WITH_ALC);
-            }else {
+            } else {
                 selectBtn(CURRENT_EQUIP.NONE);
             }
         }
         if (v == btnCotNoAlc) {
-            if(currentEquip == CURRENT_EQUIP.NONE) {
+            if (currentEquip == CURRENT_EQUIP.NONE) {
                 selectBtn(CURRENT_EQUIP.COTTON_NO_ALC);
-            }else {
+            } else {
                 selectBtn(CURRENT_EQUIP.NONE);
             }
         }
 
-        if (v == alcPainter){
+        if (v == alcPainter) {
             //enable click finish
 
         }
 
-        if (v == btnFinishCleaning){
+        if (v == btnFinishCleaning) {
             //Fade out transition
             cottonAlcControl.startAnimation(alcFadeOut);
             selectBtn(CURRENT_EQUIP.NONE);
@@ -251,12 +255,12 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             STATE = 2;
             updateState(STATE);
         }
-        if (v == btnFinishInject){
+        if (v == btnFinishInject) {
             Storage.InjectionProcess.useCotton = true;
             Storage.InjectionProcess.totalPoint00++;
             Storage.InjectionProcess.totalPoint10++;
             Storage.InjectionProcess.totalPoint20++;
-            startActivity(new Intent(this , ResultActivity.class));
+            startActivity(new Intent(this, ResultActivity.class));
             finish();
         }
 
@@ -286,29 +290,29 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private void checkInject(){
-        if(Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(0))){
-            if(currentAngle == A15){
+    private void checkInject() {
+        if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(0))) {
+            if (currentAngle == A15) {
                 Storage.InjectionProcess.totalPoint00++;
                 Storage.InjectionProcess.injectCorrect = true;
             }
         }
-        if(Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(1))){
-            if(currentAngle == A90){
+        if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(1))) {
+            if (currentAngle == A90) {
                 Storage.InjectionProcess.totalPoint10++;
                 Storage.InjectionProcess.injectCorrect = true;
             }
         }
-        if(Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(2))){
-            if(currentAngle == A45){
+        if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(2))) {
+            if (currentAngle == A45) {
                 Storage.InjectionProcess.totalPoint20++;
                 Storage.InjectionProcess.injectCorrect = true;
             }
         }
     }
 
-    private float getVaccineDept(){
-        return ((float) (adjustDeptSyringe.getProgress()*26.0))/adjustDeptSyringe.getMax();
+    private float getVaccineDept() {
+        return ((float) (adjustDeptSyringe.getProgress() * 26.0)) / adjustDeptSyringe.getMax();
     }
 
     private void updateState(int newSTATE) {
@@ -370,7 +374,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                 }
                 break;
-            case INSULIN_SYRINGE:
+            case ONE_CC:
                 switch (angle) {
                     case A15:
                         currentAngle = A15;
@@ -404,12 +408,46 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                 }
                 break;
+
+            case INSULIN_SYRINGE:
+                switch (angle) {
+                    case A15:
+                        currentAngle = A15;
+                        currTY = 0;
+                        currTX = 0;
+                        baseBitMap = BitmapFactory.decodeResource(getResources(), R.drawable.small_insulin_15);
+                        Glide.with(this).load(R.drawable.small_insulin_15).apply(centerCrop.centerCrop()).into(syringe);
+                        Glide.with(this).load(R.drawable.small_dermal_im).apply(centerCrop).into(handStyle);
+                        Glide.with(this).load(R.drawable.small_dermal_im_mask).apply(centerCrop).into(mask);
+                        adjustDeptSyringe.setProgress(0);
+                        break;
+                    case A45:
+                        currentAngle = SYRINGE_ANGLE.A45;
+                        currTY = 0;
+                        currTX = 0;
+                        baseBitMap = BitmapFactory.decodeResource(getResources(), R.drawable.small_insulin_45);
+                        Glide.with(this).load(R.drawable.small_insulin_45).apply(centerCrop.centerCrop()).into(syringe);
+                        Glide.with(this).load(R.drawable.small_subcu).apply(centerCrop).into(handStyle);
+                        Glide.with(this).load(R.drawable.small_subcu_skin_mask).apply(centerCrop).into(mask);
+                        adjustDeptSyringe.setProgress(0);
+                        break;
+                    case A90:
+                        currentAngle = A90;
+                        currTY = 0;
+                        currTX = 0;
+                        baseBitMap = BitmapFactory.decodeResource(getResources(), R.drawable.small_insulin_90);
+                        Glide.with(this).load(R.drawable.small_insulin_90).apply(centerCrop.centerCrop()).into(syringe);
+                        Glide.with(this).load(R.drawable.small_dermal_im).apply(centerCrop).into(handStyle);
+                        Glide.with(this).load(R.drawable.small_dermal_im_mask).apply(centerCrop).into(mask);
+                        adjustDeptSyringe.setProgress(0);
+                        break;
+                }
         }
     }
 
     private void moveSyr15(int diff) {
-        currTX += diff*1.3;
-        currTY += (Storage.ANGLE15_RATIO * (diff*1.3));
+        currTX += diff * 1.3;
+        currTY += (Storage.ANGLE15_RATIO * (diff * 1.3));
         Bitmap afterMoveSyr = Bitmap.createBitmap(baseBitMap.getWidth(), baseBitMap.getHeight(), baseBitMap.getConfig());
         Canvas pencil = new Canvas(afterMoveSyr);
         Matrix mtx = new Matrix();
@@ -439,7 +477,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void moveSyr90(int diff) {
-        currTY += diff*1.5;
+        currTY += diff * 1.5;
         Bitmap afterMoveSyr = Bitmap.createBitmap(baseBitMap.getWidth(), baseBitMap.getHeight(), baseBitMap.getConfig());
         Canvas pencil = new Canvas(afterMoveSyr);
         Matrix mtx = new Matrix();
@@ -455,6 +493,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private Storage.SYRINGE_TYPE getSyringeType(String type) {
         if (type.equalsIgnoreCase(Storage.THREE_CC_STR)) {
             return Storage.SYRINGE_TYPE.THREE_CC;
+        } else if (type.equalsIgnoreCase(Storage.ONE_CC_STR)) {
+            return Storage.SYRINGE_TYPE.ONE_CC;
         } else {
             return Storage.SYRINGE_TYPE.INSULIN_SYRINGE;
         }
@@ -465,7 +505,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         switch (currentAngle) {
             case A15:
                 switch (currentSyringeType) {
-                    case INSULIN_SYRINGE:
+                    case ONE_CC:
                         Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a15).transition(DrawableTransitionOptions.withCrossFade(500)).apply(centerCrop).into(syringe);
                         break;
                     case THREE_CC:
@@ -475,7 +515,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case A45:
                 switch (currentSyringeType) {
-                    case INSULIN_SYRINGE:
+                    case ONE_CC:
                         Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a45).transition(DrawableTransitionOptions.withCrossFade(500)).apply(centerCrop).into(syringe);
                         break;
                     case THREE_CC:
@@ -485,7 +525,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case A90:
                 switch (currentSyringeType) {
-                    case INSULIN_SYRINGE:
+                    case ONE_CC:
                         Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a90).transition(DrawableTransitionOptions.withCrossFade(500)).apply(centerCrop).into(syringe);
                         break;
                     case THREE_CC:
@@ -498,21 +538,25 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         updateState(STATE);
     }
 
-    Path drawPath;
-    Paint drawPaint;
-    private void selectBtn(CURRENT_EQUIP newEquip){
+
+    /**
+     * This method use to disable button while user select any equipment
+     *
+     * @param newEquip an equipment that user has been selected
+     */
+    private void selectBtn(CURRENT_EQUIP newEquip) {
         currentEquip = newEquip;
-        switch (currentEquip){
+        switch (currentEquip) {
             case COTTON_WITH_ALC:
                 btnCotNoAlc.setEnabled(false);
                 btnSyringe.setEnabled(false);
                 btnCotton.setEnabled(true);
                 btnGlove.setEnabled(false);
 
-                btnGlove.setAlpha((float)0.3);
-                btnCotNoAlc.setAlpha((float)0.3);
-                btnSyringe.setAlpha((float)0.3);
-                btnCotton.setAlpha((float)1.0);
+                btnGlove.setAlpha((float) 0.3);
+                btnCotNoAlc.setAlpha((float) 0.3);
+                btnSyringe.setAlpha((float) 0.3);
+                btnCotton.setAlpha((float) 1.0);
 
                 cottonAlcControl.setVisibility(View.VISIBLE);
                 break;
@@ -526,10 +570,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 btnCotton.setEnabled(false);
                 btnGlove.setEnabled(false);
 
-                btnGlove.setAlpha((float)0.3);
-                btnCotNoAlc.setAlpha((float)0.3);
-                btnSyringe.setAlpha((float)1.0);
-                btnCotton.setAlpha((float)0.3);
+                btnGlove.setAlpha((float) 0.3);
+                btnCotNoAlc.setAlpha((float) 0.3);
+                btnSyringe.setAlpha((float) 1.0);
+                btnCotton.setAlpha((float) 0.3);
                 break;
             case COTTON_NO_ALC:
                 cottonNoAlcClickable.setVisibility(View.VISIBLE);
@@ -538,10 +582,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 btnGlove.setEnabled(false);
                 btnCotton.setEnabled(false);
 
-                btnGlove.setAlpha((float)0.3);
-                btnCotNoAlc.setAlpha((float)1.0);
-                btnSyringe.setAlpha((float)0.3);
-                btnCotton.setAlpha((float)0.3);
+                btnGlove.setAlpha((float) 0.3);
+                btnCotNoAlc.setAlpha((float) 1.0);
+                btnSyringe.setAlpha((float) 0.3);
+                btnCotton.setAlpha((float) 0.3);
                 break;
             case NONE:
                 injectionControl.setVisibility(View.GONE);
@@ -555,10 +599,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 btnSyringe.setEnabled(true);
                 btnCotton.setEnabled(true);
 
-                btnGlove.setAlpha((float)1.0);
-                btnCotNoAlc.setAlpha((float)1.0);
-                btnSyringe.setAlpha((float)1.0);
-                btnCotton.setAlpha((float)1.0);
+                btnGlove.setAlpha((float) 1.0);
+                btnCotNoAlc.setAlpha((float) 1.0);
+                btnSyringe.setAlpha((float) 1.0);
+                btnCotton.setAlpha((float) 1.0);
                 updateState(STATE);
                 break;
         }

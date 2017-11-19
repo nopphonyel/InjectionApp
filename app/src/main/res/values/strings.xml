@@ -276,8 +276,8 @@
     <string name="Intravenous_threeWay_text">Type: Three Way</string>
 
 
-    <string name="syr_3cc" translatable="false">Syringe 3CC</string>
-    <string name="syr_insu" translatable="false">Syringe Insulin</string>
+    <string name="syr_3cc" translatable="false">Syringe 3ml</string>
+    <string name="syr_insu" translatable="false">Syringe 1ml</string>
     <string name="dmpa" translatable="false">DMPA</string>
     <string name="pvrv" translatable="false">PVRV</string>
     <string name="insulin" translatable="false">Insulin</string>
@@ -312,5 +312,13 @@
     <string name="inject_result_injection_x">Incorrect injection angle</string>
     <string name="inject_result_injection_dept_x">Incorrect injection dept</string>
     <string name="inject_result_injection_cotton_x">No cotton on injection spot</string>
-    <string name="return_menu">Return to main menu</string>
+    <string name="return_menu">Back to main menu</string>
+    <string name="no_22">No. 22</string>
+    <string name="no_23">No. 23</string>
+    <string name="no_25">No. 25</string>
+    <string name="no_26">No. 26</string>
+    <string name="syr_insu_fixed" translatable="false">Syringe Insulin</string>
+    <string name="play_again">Play again</string>
+    <string name="back">Back</string>
+    <string name="select_needle_size_unavi">Using built in needle</string>
 </resources>

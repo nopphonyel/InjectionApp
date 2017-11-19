@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import th.ac.kku.nu.injectionroom.R;
@@ -26,11 +27,19 @@ public class TaskDetails extends AppCompatActivity implements View.OnClickListen
 
     TextView taskTitle , taskDesc;
     Button startBtn;
+    ImageView backBtn;
     private void initializeComponent(){
         taskTitle = (TextView) findViewById(R.id.task_type_title);
         taskDesc = (TextView) findViewById(R.id.task_desc);
         startBtn = (Button) findViewById(R.id.start_task);
         startBtn.setOnClickListener(this);
+        backBtn = (ImageView) findViewById(R.id.ic_back);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     String currentKey;

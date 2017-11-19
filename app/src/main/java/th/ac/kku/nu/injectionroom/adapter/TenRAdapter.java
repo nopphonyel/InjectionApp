@@ -2,6 +2,7 @@ package th.ac.kku.nu.injectionroom.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,16 +64,16 @@ public class TenRAdapter extends RecyclerView.Adapter<TenRAdapter.ViewHolder>  {
                 context.getResources().getString(R.string.detail_ten_r_8), context.getResources().getString(R.string.detail_ten_r_9),
                 context.getResources().getString(R.string.detail_ten_r_10)};
 
-        int[] images = {R.drawable.right_1,
-                R.drawable.right_2,
-                R.drawable.right_3,
-                R.drawable.right_4,
-                R.drawable.right_5,
-                R.drawable.right_6,
-                R.drawable.right_7,
-                R.drawable.right_8,
-                R.drawable.right_9,
-                R.drawable.right_10};
+        int[] images = {R.drawable.right_drug,
+                R.drawable.right_dose,
+                R.drawable.right_route,
+                R.drawable.right_time,
+                R.drawable.right_patient,
+                R.drawable.right_history,
+                R.drawable.right_interaction,
+                R.drawable.right_refuse,
+                R.drawable.right_ed,
+                R.drawable.right_doc};
 
         holder.itemTitle.setText(titles[position]);
         holder.itemDetail.setText(details[position]);

@@ -89,8 +89,10 @@ public class ResultActivity extends AppCompatActivity {
 
     private void updateResult() {
         String ptsString = "";
+        Log.d("DRUG VOLUMN" ,"VOL:" + Storage.InjectionProcess.drugVolumn );
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(0))) {
-            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN00 && Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN00) {
+            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN00_MAX &&
+                    Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN00_MIN) {
                 Storage.InjectionProcess.drugVolumeCorrect = true;
                 Storage.InjectionProcess.totalPoint00++;
             }
@@ -101,7 +103,8 @@ public class ResultActivity extends AppCompatActivity {
             ptsString = Storage.InjectionProcess.totalPoint00 + "/" + 9;
         }
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(1))) {
-            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN10 && Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN10) {
+            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN10_MAX &&
+                    Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN10_MIN) {
                 Storage.InjectionProcess.drugVolumeCorrect = true;
                 Storage.InjectionProcess.totalPoint10++;
             }
@@ -112,7 +115,8 @@ public class ResultActivity extends AppCompatActivity {
             ptsString = Storage.InjectionProcess.totalPoint10 + "/" + 9;
         }
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(2))) {
-            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN20 && Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN20) {
+            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN20_MAX &&
+                    Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN20_MIN) {
                 Storage.InjectionProcess.drugVolumeCorrect = true;
                 Storage.InjectionProcess.totalPoint20++;
             }

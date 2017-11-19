@@ -75,7 +75,9 @@ public class Storage {
         public static float MAXDEPT00 = (float)3.0 , MINDEPT00 = (float)2.0 ,
                 MAXDEPT20 = (float)17.00 , MINDEPT20 = (float)15.00 ,
                 MAXDEPT10 = (float)20.00 , MINDEPT10 = (float)18.00;
-        public static float DRUG_VOLUMN00 = (float) 0.1 , DRUG_VOLUMN10 = (float) 1.0 , DRUG_VOLUMN20 = (float) 0.1;
+        public static float DRUG_VOLUMN00_MIN = (float) 0.09 , DRUG_VOLUMN00_MAX = (float) 0.11 ,
+                DRUG_VOLUMN10_MIN = (float) 0.99 , DRUG_VOLUMN10_MAX = (float) 1.01 ,
+                DRUG_VOLUMN20_MIN = (float) 0.09 , DRUG_VOLUMN20_MAX = (float) 0.11;
         public static int totalPoint00 =0 , totalPoint10=0 , totalPoint20=0;
 
         public static boolean glove = false , cottonAlc = false , injectCorrect = false , deptCorrect = false , useCotton = false;

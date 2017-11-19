@@ -272,15 +272,16 @@
         <Button
             android:id="@+id/play_again"
             style="@style/BigButton.ActionPositive"
+            android:layout_width="wrap_content"
             android:layout_weight="1"
             android:text="@string/play_again" />
 
         <Button
             android:id="@+id/return_to_menu"
+            android:layout_width="wrap_content"
             android:layout_weight="1"
             style="@style/BigButton.ActionSecondaryPositive"
-            android:text="@string/return_menu"
-            />
+            android:text="@string/return_menu" />
 
     </LinearLayout>
 

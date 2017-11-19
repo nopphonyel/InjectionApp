@@ -7,21 +7,17 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatSeekBar;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.DragEvent;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -33,6 +29,7 @@ import com.bumptech.glide.request.RequestOptions;
 import th.ac.kku.nu.injectionroom.R;
 import th.ac.kku.nu.injectionroom.Storage;
 import th.ac.kku.nu.injectionroom.customComponent.PaintView;
+import th.ac.kku.nu.injectionroom.dialog.TaskDialog;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static th.ac.kku.nu.injectionroom.activity.game.GameActivity.SYRINGE_ANGLE.A15;
@@ -47,11 +44,11 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     ImageButton btnGlove, btnCotton, btnSyringe, btnCotNoAlc;
     Button btnA15, btnA45, btnA90, btnInject, btnFinishCleaning, btnFinishInject;
-    ImageView skin, handStyle, syringe, mask, cottonOnSkin;
+    ImageView skin, handStyle, syringe, mask, cottonOnSkin , reviewTask;
     RelativeLayout cottonAlcControl;
     RequestOptions centerCrop, fitCenter;
     RelativeLayout injectionControl;
-    TextView dept;
+    TextView dept , reviewTaskText;
     PaintView alcPainter;
     RelativeLayout cottonNoAlcClickable;
     Animation alcFadeOut, injectionControlFade, syringeSlide;
@@ -78,6 +75,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         paint = new Paint();
         paint.setAntiAlias(true);
+
+        reviewTask = (ImageView) findViewById(R.id.ic_review_task);
+        reviewTaskText = (TextView) findViewById(R.id.textReviewTask);
 
         injectionControl = (RelativeLayout) findViewById(R.id.injection_control);
         cottonAlcControl = (RelativeLayout) findViewById(R.id.cotton_alc_control);
@@ -198,6 +198,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 cottonOnSkin.setVisibility(View.VISIBLE);
             }
         });
+
+        reviewTask.setOnClickListener(this);
+        reviewTaskText.setOnClickListener(this);
     }
 
     @Override
@@ -288,6 +291,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             selectBtn(CURRENT_EQUIP.NONE);
         }
 
+        if(v == reviewTask || v == reviewTaskText){
+            TaskDialog taskDialog = TaskDialog.newInstance(Storage.currentTaskTypeKey , Storage.currentTaskNumber);
+            taskDialog.show(getFragmentManager() , "Now review task");
+        }
     }
 
     private void checkInject() {
@@ -374,7 +381,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                 }
                 break;
-            case ONE_CC:
+            case INSULIN_SYRINGE:
                 switch (angle) {
                     case A15:
                         currentAngle = A15;
@@ -409,14 +416,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
 
-            case INSULIN_SYRINGE:
+            case ONE_CC:
                 switch (angle) {
                     case A15:
                         currentAngle = A15;
                         currTY = 0;
                         currTX = 0;
-                        baseBitMap = BitmapFactory.decodeResource(getResources(), R.drawable.small_insulin_15);
-                        Glide.with(this).load(R.drawable.small_insulin_15).apply(centerCrop.centerCrop()).into(syringe);
+                        baseBitMap = BitmapFactory.decodeResource(getResources(), R.drawable.small_1cc_15);
+                        Glide.with(this).load(R.drawable.small_1cc_15).apply(centerCrop.centerCrop()).into(syringe);
                         Glide.with(this).load(R.drawable.small_dermal_im).apply(centerCrop).into(handStyle);
                         Glide.with(this).load(R.drawable.small_dermal_im_mask).apply(centerCrop).into(mask);
                         adjustDeptSyringe.setProgress(0);
@@ -425,8 +432,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                         currentAngle = SYRINGE_ANGLE.A45;
                         currTY = 0;
                         currTX = 0;
-                        baseBitMap = BitmapFactory.decodeResource(getResources(), R.drawable.small_insulin_45);
-                        Glide.with(this).load(R.drawable.small_insulin_45).apply(centerCrop.centerCrop()).into(syringe);
+                        baseBitMap = BitmapFactory.decodeResource(getResources(), R.drawable.small_1cc_45);
+                        Glide.with(this).load(R.drawable.small_1cc_45).apply(centerCrop.centerCrop()).into(syringe);
                         Glide.with(this).load(R.drawable.small_subcu).apply(centerCrop).into(handStyle);
                         Glide.with(this).load(R.drawable.small_subcu_skin_mask).apply(centerCrop).into(mask);
                         adjustDeptSyringe.setProgress(0);
@@ -435,8 +442,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                         currentAngle = A90;
                         currTY = 0;
                         currTX = 0;
-                        baseBitMap = BitmapFactory.decodeResource(getResources(), R.drawable.small_insulin_90);
-                        Glide.with(this).load(R.drawable.small_insulin_90).apply(centerCrop.centerCrop()).into(syringe);
+                        baseBitMap = BitmapFactory.decodeResource(getResources(), R.drawable.small_1cc_90);
+                        Glide.with(this).load(R.drawable.small_1cc_90).apply(centerCrop.centerCrop()).into(syringe);
                         Glide.with(this).load(R.drawable.small_dermal_im).apply(centerCrop).into(handStyle);
                         Glide.with(this).load(R.drawable.small_dermal_im_mask).apply(centerCrop).into(mask);
                         adjustDeptSyringe.setProgress(0);
@@ -505,31 +512,40 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         switch (currentAngle) {
             case A15:
                 switch (currentSyringeType) {
-                    case ONE_CC:
-                        Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a15).transition(DrawableTransitionOptions.withCrossFade(500)).apply(centerCrop).into(syringe);
+                    case INSULIN_SYRINGE:
+                        Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a15).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
                         break;
                     case THREE_CC:
-                        Glide.with(this).load(R.drawable.small_cc3_no_drug_a15).transition(DrawableTransitionOptions.withCrossFade(500)).apply(centerCrop).into(syringe);
+                        Glide.with(this).load(R.drawable.small_cc3_no_drug_a15).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
+                        break;
+                    case ONE_CC:
+                        Glide.with(this).load(R.drawable.small_null_1cc_15).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
                         break;
                 }
                 break;
             case A45:
                 switch (currentSyringeType) {
-                    case ONE_CC:
-                        Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a45).transition(DrawableTransitionOptions.withCrossFade(500)).apply(centerCrop).into(syringe);
+                    case INSULIN_SYRINGE:
+                        Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a45).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
                         break;
                     case THREE_CC:
-                        Glide.with(this).load(R.drawable.small_cc3_no_drug_a45).transition(DrawableTransitionOptions.withCrossFade(500)).apply(centerCrop).into(syringe);
+                        Glide.with(this).load(R.drawable.small_cc3_no_drug_a45).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
+                        break;
+                    case ONE_CC:
+                        Glide.with(this).load(R.drawable.small_null_1cc_45).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
                         break;
                 }
                 break;
             case A90:
                 switch (currentSyringeType) {
-                    case ONE_CC:
-                        Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a90).transition(DrawableTransitionOptions.withCrossFade(500)).apply(centerCrop).into(syringe);
+                    case INSULIN_SYRINGE:
+                        Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a90).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
                         break;
                     case THREE_CC:
-                        Glide.with(this).load(R.drawable.small_cc3_no_drug_a90).transition(DrawableTransitionOptions.withCrossFade(500)).apply(centerCrop).into(syringe);
+                        Glide.with(this).load(R.drawable.small_cc3_no_drug_a90).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
+                        break;
+                    case ONE_CC:
+                        Glide.with(this).load(R.drawable.small_null_1cc_90).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
                         break;
                 }
                 break;

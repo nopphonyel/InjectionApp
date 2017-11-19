@@ -37,7 +37,7 @@ public class SelectEquipment extends AppCompatActivity implements View.OnClickLi
     RadioGroup syringeType, needleSize, drugType;
     Button syringeAdjBtn;
     ImageView backBtn;
-    TextView selectNeedleTitle;
+    TextView selectNeedleTitle , reviewTaskContent;
 
     private void initializeComponent() {
         syringeAdjBtn = (Button) findViewById(R.id.adj_syr_btn);
@@ -48,6 +48,8 @@ public class SelectEquipment extends AppCompatActivity implements View.OnClickLi
         drugType = (RadioGroup) findViewById(R.id.drug_type);
         selectNeedleTitle = (TextView) findViewById(R.id.select_needle_title);
         root = (ScrollView) findViewById(R.id.content_list);
+        reviewTaskContent = (TextView) findViewById(R.id.review_task_content);
+        reviewTaskContent.setText(Storage.Task.taskListResource.get(Storage.currentTaskTypeKey).get(Storage.currentTaskNumber));
         addListener();
     }
 
@@ -199,6 +201,7 @@ public class SelectEquipment extends AppCompatActivity implements View.OnClickLi
             if (currentSelectedSyringe == Storage.SYRINGE_TYPE.INSULIN_SYRINGE) {
                 Storage.InjectionProcess.totalPoint20+=2;
                 Storage.InjectionProcess.syringe = true;
+                Storage.InjectionProcess.needleSize = true;
             }
             /*
             if (currentSelectedNeedle == Storage.NEEDLE_NO.NO_24 ||

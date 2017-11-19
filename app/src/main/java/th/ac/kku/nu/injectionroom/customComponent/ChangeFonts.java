@@ -21,4 +21,6 @@ public class ChangeFonts extends Application {
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
                 .setDefaultFontPath("fonts/waffleRegular.otf").setFontAttrId(R.attr.fontPath).build());
     }
+
+
 }

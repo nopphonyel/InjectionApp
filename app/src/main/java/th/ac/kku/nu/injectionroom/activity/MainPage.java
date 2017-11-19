@@ -2,14 +2,22 @@ package th.ac.kku.nu.injectionroom.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.bumptech.glide.Glide;
+
+import java.util.Locale;
 
 import th.ac.kku.nu.injectionroom.R;
 import th.ac.kku.nu.injectionroom.activity.game.SelectTask;
@@ -21,6 +29,8 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener{
     ImageView syringe,nurse,iconName;
     CardView tenR,info,game;
     Handler handler = new Handler();
+
+    Locale myLocale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +75,18 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener{
         info.setOnClickListener(this);
         game.setOnClickListener(this);
 
+
+    }
+
+    public void setLocale(String lang){
+        myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+        Intent refresh = new Intent(this, MainPage.class);
+        startActivity(refresh);
     }
 
     @Override
@@ -80,6 +102,8 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener{
             startActivity(intent);
         }
     }
+
+
 
     @Override
     protected void attachBaseContext(Context base){

@@ -4,36 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="th.ac.kku.nu.injectionroom.activity.TenR"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="th.ac.kku.nu.injectionroom.activity.TenR">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
-        app:titleTextColor="@color/pureWhite"
         app:titleTextAppearance="@style/Toolbar"
-        >
-    </android.support.v7.widget.Toolbar>
+        app:titleTextColor="@color/pureWhite"></android.support.v7.widget.Toolbar>
 
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="wrap_content">
         </android.support.v7.widget.RecyclerView>
 
-    </LinearLayout>
-    <TextView
-        android:text="@string/ten_r_ref"
-        android:textSize="18sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"/>
+    </RelativeLayout>
+
+
 </LinearLayout>

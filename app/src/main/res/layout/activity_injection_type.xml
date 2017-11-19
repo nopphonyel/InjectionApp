@@ -25,7 +25,7 @@
                 android:layout_marginTop="50dp"
                 android:paddingBottom="10dp"
                 android:text="@string/injection_position"
-                android:textSize="40sp" />
+                style="@style/TitleTextView.Large" />
 
             <android.support.v7.widget.CardView
                 android:id="@+id/intradermal"
@@ -47,7 +47,7 @@
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/Intradermal_text"
-                    android:textSize="30sp" />
+                    style="@style/TitleTextView" />
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -70,7 +70,7 @@
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/Subcutaneous_text"
-                    android:textSize="30sp" />
+                    style="@style/TitleTextView" />
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -93,7 +93,7 @@
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/Intramuscular_text"
-                    android:textSize="30sp" />
+                    style="@style/TitleTextView" />
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -117,7 +117,7 @@
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/Intravenous_text"
-                    android:textSize="30sp" />
+                    style="@style/TitleTextView" />
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView

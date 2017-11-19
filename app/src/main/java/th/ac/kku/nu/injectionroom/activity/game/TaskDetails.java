@@ -1,5 +1,6 @@
 package th.ac.kku.nu.injectionroom.activity.game;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import th.ac.kku.nu.injectionroom.R;
 import th.ac.kku.nu.injectionroom.Storage;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class TaskDetails extends AppCompatActivity implements View.OnClickListener {
 
@@ -55,5 +57,10 @@ public class TaskDetails extends AppCompatActivity implements View.OnClickListen
     private void setCurrentMode(String keys , Integer index){
         Storage.currentTaskTypeKey = keys;
         Storage.currentTaskNumber = index;
+    }
+
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

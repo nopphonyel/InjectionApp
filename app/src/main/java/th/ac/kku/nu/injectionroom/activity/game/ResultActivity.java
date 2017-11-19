@@ -1,5 +1,6 @@
 package th.ac.kku.nu.injectionroom.activity.game;
 
+import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import th.ac.kku.nu.injectionroom.R;
 import th.ac.kku.nu.injectionroom.Storage;
 import th.ac.kku.nu.injectionroom.activity.MainPage;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -147,5 +149,10 @@ public class ResultActivity extends AppCompatActivity {
             cottonNoAlc.setText(getString(R.string.inject_result_injection_cotton_x));
             stCottonNoAlc.setImageDrawable(getDrawable(R.drawable.incorrect));
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

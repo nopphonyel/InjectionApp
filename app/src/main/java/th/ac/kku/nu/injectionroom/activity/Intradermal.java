@@ -1,5 +1,6 @@
 package th.ac.kku.nu.injectionroom.activity;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -15,6 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import th.ac.kku.nu.injectionroom.R;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Intradermal extends AppCompatActivity {
 
@@ -47,6 +49,10 @@ public class Intradermal extends AppCompatActivity {
         id_ex = (ImageView)findViewById(R.id.id_ex);
         Glide.with(this).load(R.drawable.id_ex).into(id_ex);
 
+    }
 
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

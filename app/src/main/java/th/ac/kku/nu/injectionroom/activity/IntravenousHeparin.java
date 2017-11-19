@@ -1,5 +1,6 @@
 package th.ac.kku.nu.injectionroom.activity;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import th.ac.kku.nu.injectionroom.R;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class IntravenousHeparin extends AppCompatActivity {
 
@@ -34,5 +36,10 @@ public class IntravenousHeparin extends AppCompatActivity {
 
         position = (ImageView)findViewById(R.id.intravenous_heparinLock_position);
         Glide.with(this).load(R.drawable.heparin_lock).into(position);
+    }
+
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

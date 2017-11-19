@@ -1,5 +1,6 @@
 package th.ac.kku.nu.injectionroom.activity.game;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import th.ac.kku.nu.injectionroom.R;
 import th.ac.kku.nu.injectionroom.Storage;
 import th.ac.kku.nu.injectionroom.dialog.SyringeAdjustorDialog;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SelectEquipment extends AppCompatActivity implements View.OnClickListener ,RadioGroup.OnCheckedChangeListener, SyringeAdjustorDialog.OnClickConfirmAdjustDialog{
 
@@ -167,5 +169,10 @@ public class SelectEquipment extends AppCompatActivity implements View.OnClickLi
                 Storage.InjectionProcess.drug =true;
             }
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

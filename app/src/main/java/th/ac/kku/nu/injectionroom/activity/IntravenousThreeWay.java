@@ -1,10 +1,12 @@
 package th.ac.kku.nu.injectionroom.activity;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import th.ac.kku.nu.injectionroom.R;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class IntravenousThreeWay extends AppCompatActivity {
 
@@ -28,5 +30,10 @@ public class IntravenousThreeWay extends AppCompatActivity {
         for (String procedure_contents : procedure_contents) {
             procedure.append(procedure_contents + "\n");
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

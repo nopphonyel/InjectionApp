@@ -1,5 +1,6 @@
 package th.ac.kku.nu.injectionroom.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,8 @@ import com.bumptech.glide.Glide;
 
 import th.ac.kku.nu.injectionroom.R;
 import th.ac.kku.nu.injectionroom.activity.game.SelectTask;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainPage extends AppCompatActivity implements View.OnClickListener{
 
@@ -25,7 +28,7 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.activity_main_page);
 
         syringe = (ImageView)findViewById(R.id.syringe_main);
-        Glide.with(this).load(R.drawable.syringe).into(syringe);
+        Glide.with(this).load(R.drawable.syringe2).into(syringe);
 
         nurse = (ImageView)findViewById(R.id.nurse_main);
         Glide.with(this).load(R.drawable.nurse_main).into(nurse);
@@ -76,5 +79,10 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener{
             Intent intent = new Intent(this, SelectTask.class);
             startActivity(intent);
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

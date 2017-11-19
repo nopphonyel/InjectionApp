@@ -1,5 +1,6 @@
 package th.ac.kku.nu.injectionroom.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 
 import th.ac.kku.nu.injectionroom.R;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class InjectionType extends AppCompatActivity implements View.OnClickListener {
 
@@ -92,5 +94,10 @@ public class InjectionType extends AppCompatActivity implements View.OnClickList
             Intent intent = new Intent(this, IntravenousThreeWay.class);
             startActivity(intent);
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

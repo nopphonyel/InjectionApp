@@ -1,5 +1,6 @@
 package th.ac.kku.nu.injectionroom.activity.game;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -32,6 +33,7 @@ import com.bumptech.glide.request.RequestOptions;
 import th.ac.kku.nu.injectionroom.R;
 import th.ac.kku.nu.injectionroom.Storage;
 import th.ac.kku.nu.injectionroom.customComponent.PaintView;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static th.ac.kku.nu.injectionroom.activity.game.GameActivity.SYRINGE_ANGLE.A15;
 import static th.ac.kku.nu.injectionroom.activity.game.GameActivity.SYRINGE_ANGLE.A45;
@@ -560,5 +562,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 updateState(STATE);
                 break;
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context base){
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(base));
     }
 }

@@ -120,7 +120,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:drawableTop="@drawable/preview_equp2"
+                            android:drawableTop="@drawable/preview_equp3"
                             android:text="@string/syr_insu"
                             style="@style/TextView"
                             android:textAlignment="center" />
@@ -130,7 +130,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:drawableTop="@drawable/preview_equp3"
+                            android:drawableTop="@drawable/preview_equp2"
                             android:text="@string/syr_insu_fixed"
                             style="@style/TextView"
                             android:textAlignment="center" />

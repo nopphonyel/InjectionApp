@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 
 import th.ac.kku.nu.injectionroom.R;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -16,6 +19,7 @@ public class InjectionType extends AppCompatActivity implements View.OnClickList
             Intravenous_direct,Intravenous_heparinLock,Intravenous_normalSaline,
             Intravenous_IVSet,Intravenous_soluSet,Intravenous_threeWay;
     private int toggle = 0;
+    ImageView bg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,9 @@ public class InjectionType extends AppCompatActivity implements View.OnClickList
         Intravenous_IVSet.setOnClickListener(this);
         Intravenous_soluSet.setOnClickListener(this);
         Intravenous_threeWay.setOnClickListener(this);
+
+        bg = (ImageView) findViewById(R.id.bg);
+        Glide.with(this).load(R.drawable.blue2).into(bg);
 
     }
 

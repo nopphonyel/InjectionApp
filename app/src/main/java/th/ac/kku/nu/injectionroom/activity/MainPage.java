@@ -29,7 +29,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainPage extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView syringe, nurse, iconName;
+    ImageView syringe, nurse, iconName, bg;
     CardView tenR, info, game;
     Handler handler = new Handler();
     Locale myLocale;
@@ -48,6 +48,9 @@ public class MainPage extends AppCompatActivity implements View.OnClickListener 
 
         iconName = (ImageView) findViewById(R.id.icon_name_main);
         Glide.with(this).load(R.drawable.iconname).into(iconName);
+
+        bg = (ImageView) findViewById(R.id.bg);
+        Glide.with(this).load(R.drawable.blue2).into(bg);
 
         tenR = (CardView) findViewById(R.id.ten_R);
         info = (CardView) findViewById(R.id.information);

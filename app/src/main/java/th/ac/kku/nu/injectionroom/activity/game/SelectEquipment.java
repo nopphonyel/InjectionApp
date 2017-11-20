@@ -84,7 +84,7 @@ public class SelectEquipment extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick() {
-        Storage.InjectionProcess.drugVolumn = syringeAdjustorDialog.getVolumn();
+        Storage.InjectionProcess.drugVolume = syringeAdjustorDialog.getVolumn();
         syringeAdjustorDialog.dismiss();
         sendingEqp = new Bundle();
         if (currentSelectedSyringe == Storage.SYRINGE_TYPE.THREE_CC) {
@@ -167,38 +167,45 @@ public class SelectEquipment extends AppCompatActivity implements View.OnClickLi
     private void commitPTS() {
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(0))) {
             if (currentSelectedSyringe == Storage.SYRINGE_TYPE.ONE_CC) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 00 : Right syringe 1CC");
                 Storage.InjectionProcess.totalPoint00++;
                 Storage.InjectionProcess.syringe = true;
             }
             if (currentSelectedNeedle == Storage.NEEDLE_NO.NO_27 ||
                     currentSelectedNeedle == Storage.NEEDLE_NO.NO_26 ||
                     currentSelectedNeedle == Storage.NEEDLE_NO.NO_25) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 00 : Right needle number 25,26,27");
                 Storage.InjectionProcess.totalPoint00++;
                 Storage.InjectionProcess.needleSize = true;
             }
             if (currentSelectedDrug == Storage.DRUG_TYPE.PVRV) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 00 : Right drug [PVRV]");
                 Storage.InjectionProcess.totalPoint00++;
                 Storage.InjectionProcess.drug = true;
             }
         }
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(1))) {
             if (currentSelectedSyringe == Storage.SYRINGE_TYPE.THREE_CC) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 10 : Right syringe 3CC");
                 Storage.InjectionProcess.totalPoint10++;
                 Storage.InjectionProcess.syringe = true;
             }
             if (currentSelectedNeedle == Storage.NEEDLE_NO.NO_23 ||
                     currentSelectedNeedle == Storage.NEEDLE_NO.NO_22 ||
                     currentSelectedNeedle == Storage.NEEDLE_NO.NO_21) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 10 : Right needle number 21,22,23");
                 Storage.InjectionProcess.totalPoint10++;
                 Storage.InjectionProcess.needleSize = true;
             }
             if (currentSelectedDrug == Storage.DRUG_TYPE.DMPA) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 10 : Right drug [DMPA]");
                 Storage.InjectionProcess.totalPoint10++;
                 Storage.InjectionProcess.drug = true;
             }
         }
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(2))) {
             if (currentSelectedSyringe == Storage.SYRINGE_TYPE.INSULIN_SYRINGE) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 20 : Right syringe Insulin / No needle size required");
                 Storage.InjectionProcess.totalPoint20+=2;
                 Storage.InjectionProcess.syringe = true;
                 Storage.InjectionProcess.needleSize = true;
@@ -211,6 +218,7 @@ public class SelectEquipment extends AppCompatActivity implements View.OnClickLi
                 Storage.InjectionProcess.needleSize = true;
             }*/
             if (currentSelectedDrug == Storage.DRUG_TYPE.INSULIN) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 20 : Right drug [Insulin]");
                 Storage.InjectionProcess.totalPoint20++;
                 Storage.InjectionProcess.drug = true;
             }

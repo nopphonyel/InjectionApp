@@ -213,6 +213,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == btnGlove) {
+            Log.d("PTS_MANAGER" , "Adding PTS on 00 , 10 , 20 : Wearing gloves");
             Storage.InjectionProcess.totalPoint00++;
             Storage.InjectionProcess.totalPoint10++;
             Storage.InjectionProcess.totalPoint20++;
@@ -250,6 +251,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             //Fade out transition
             cottonAlcControl.startAnimation(alcFadeOut);
             selectBtn(CURRENT_EQUIP.NONE);
+            Log.d("PTS_MANAGER" , "Adding PTS on 00 , 10 , 20 : Clean skin with alcohol");
             Storage.InjectionProcess.cottonAlc = true;
             Storage.InjectionProcess.totalPoint00++;
             Storage.InjectionProcess.totalPoint10++;
@@ -259,6 +261,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             updateState(STATE);
         }
         if (v == btnFinishInject) {
+            Log.d("PTS_MANAGER" , "Adding PTS on 00 , 10 , 20 : Using cotton on Inject spot");
             Storage.InjectionProcess.useCotton = true;
             Storage.InjectionProcess.totalPoint00++;
             Storage.InjectionProcess.totalPoint10++;
@@ -300,18 +303,21 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private void checkInject() {
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(0))) {
             if (currentAngle == A15) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 00 : Right angle [15]");
                 Storage.InjectionProcess.totalPoint00++;
                 Storage.InjectionProcess.injectCorrect = true;
             }
         }
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(1))) {
             if (currentAngle == A90) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 10 : Right angle [90]");
                 Storage.InjectionProcess.totalPoint10++;
                 Storage.InjectionProcess.injectCorrect = true;
             }
         }
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(2))) {
             if (currentAngle == A45) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 20 : Right angle [45]");
                 Storage.InjectionProcess.totalPoint20++;
                 Storage.InjectionProcess.injectCorrect = true;
             }
@@ -513,39 +519,39 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             case A15:
                 switch (currentSyringeType) {
                     case INSULIN_SYRINGE:
-                        Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a15).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
+                        Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a15).transition(DrawableTransitionOptions.withCrossFade(150)).apply(centerCrop).into(syringe);
                         break;
                     case THREE_CC:
-                        Glide.with(this).load(R.drawable.small_cc3_no_drug_a15).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
+                        Glide.with(this).load(R.drawable.small_cc3_no_drug_a15).transition(DrawableTransitionOptions.withCrossFade(150)).apply(centerCrop).into(syringe);
                         break;
                     case ONE_CC:
-                        Glide.with(this).load(R.drawable.small_null_1cc_15).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
+                        Glide.with(this).load(R.drawable.small_null_1cc_15).transition(DrawableTransitionOptions.withCrossFade(150)).apply(centerCrop).into(syringe);
                         break;
                 }
                 break;
             case A45:
                 switch (currentSyringeType) {
                     case INSULIN_SYRINGE:
-                        Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a45).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
+                        Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a45).transition(DrawableTransitionOptions.withCrossFade(150)).apply(centerCrop).into(syringe);
                         break;
                     case THREE_CC:
-                        Glide.with(this).load(R.drawable.small_cc3_no_drug_a45).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
+                        Glide.with(this).load(R.drawable.small_cc3_no_drug_a45).transition(DrawableTransitionOptions.withCrossFade(150)).apply(centerCrop).into(syringe);
                         break;
                     case ONE_CC:
-                        Glide.with(this).load(R.drawable.small_null_1cc_45).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
+                        Glide.with(this).load(R.drawable.small_null_1cc_45).transition(DrawableTransitionOptions.withCrossFade(150)).apply(centerCrop).into(syringe);
                         break;
                 }
                 break;
             case A90:
                 switch (currentSyringeType) {
                     case INSULIN_SYRINGE:
-                        Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a90).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
+                        Glide.with(this).load(R.drawable.small_nullsyringe_ri_pvrv_a90).transition(DrawableTransitionOptions.withCrossFade(150)).apply(centerCrop).into(syringe);
                         break;
                     case THREE_CC:
-                        Glide.with(this).load(R.drawable.small_cc3_no_drug_a90).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
+                        Glide.with(this).load(R.drawable.small_cc3_no_drug_a90).transition(DrawableTransitionOptions.withCrossFade(150)).apply(centerCrop).into(syringe);
                         break;
                     case ONE_CC:
-                        Glide.with(this).load(R.drawable.small_null_1cc_90).transition(DrawableTransitionOptions.withCrossFade(250)).apply(centerCrop).into(syringe);
+                        Glide.with(this).load(R.drawable.small_null_1cc_90).transition(DrawableTransitionOptions.withCrossFade(150)).apply(centerCrop).into(syringe);
                         break;
                 }
                 break;

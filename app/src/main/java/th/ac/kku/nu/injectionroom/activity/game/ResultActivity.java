@@ -32,7 +32,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     ImageView stEqpSyr, stEqpNeedleNum, stEqpDrug, stDrugVol, stGlove, stCottonAlc, stInjection, stDept, stCottonNoAlc;
-    TextView eqpSyr, eqpNeedleNum, eqpDrug, eqpDrugVolumn;
+    TextView eqpSyr, eqpNeedleNum, eqpDrug, eqpDrugVolume;
     TextView glove, cottonAlc, injection, dept, cottonNoAlc;
     TextView pts;
     Button returnToMenu , playAgain;
@@ -44,7 +44,7 @@ public class ResultActivity extends AppCompatActivity {
         eqpSyr = (TextView) findViewById(R.id.eqp_syr);
         eqpNeedleNum = (TextView) findViewById(R.id.eqp_needle_num);
         eqpDrug = (TextView) findViewById(R.id.eqp_drug);
-        eqpDrugVolumn = (TextView) findViewById(R.id.eqp_drug_volumn);
+        eqpDrugVolume = (TextView) findViewById(R.id.eqp_drug_volumn);
 
         glove = (TextView) findViewById(R.id.glove);
         cottonAlc = (TextView) findViewById(R.id.cotton_alc);
@@ -89,38 +89,43 @@ public class ResultActivity extends AppCompatActivity {
 
     private void updateResult() {
         String ptsString = "";
-        Log.d("DRUG VOLUMN" ,"VOL:" + Storage.InjectionProcess.drugVolumn );
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(0))) {
-            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN00_MAX &&
-                    Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN00_MIN) {
+            if (Storage.InjectionProcess.drugVolume <= Storage.InjectionProcess.DRUG_VOLUMN00_MAX &&
+                    Storage.InjectionProcess.drugVolume >= Storage.InjectionProcess.DRUG_VOLUMN00_MIN) {
                 Storage.InjectionProcess.drugVolumeCorrect = true;
+                Log.d("PTS_MANAGER" , "Adding PTS on 00 : Right volume [" + Storage.InjectionProcess.drugVolume + "]");
                 Storage.InjectionProcess.totalPoint00++;
             }
             if (Storage.InjectionProcess.dept <= Storage.InjectionProcess.MAXDEPT00 && Storage.InjectionProcess.dept >= Storage.InjectionProcess.MINDEPT00) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 00 : Right dept [" + Storage.InjectionProcess.dept + "]");
                 Storage.InjectionProcess.deptCorrect = true;
                 Storage.InjectionProcess.totalPoint00++;
             }
             ptsString = Storage.InjectionProcess.totalPoint00 + "/" + 9;
         }
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(1))) {
-            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN10_MAX &&
-                    Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN10_MIN) {
+            if (Storage.InjectionProcess.drugVolume <= Storage.InjectionProcess.DRUG_VOLUMN10_MAX &&
+                    Storage.InjectionProcess.drugVolume >= Storage.InjectionProcess.DRUG_VOLUMN10_MIN) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 10 : Right volume [" + Storage.InjectionProcess.drugVolume + "]");
                 Storage.InjectionProcess.drugVolumeCorrect = true;
                 Storage.InjectionProcess.totalPoint10++;
             }
             if (Storage.InjectionProcess.dept <= Storage.InjectionProcess.MAXDEPT10 && Storage.InjectionProcess.dept >= Storage.InjectionProcess.MINDEPT10) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 10 : Right dept [" + Storage.InjectionProcess.dept + "]");
                 Storage.InjectionProcess.deptCorrect = true;
                 Storage.InjectionProcess.totalPoint10++;
             }
             ptsString = Storage.InjectionProcess.totalPoint10 + "/" + 9;
         }
         if (Storage.currentTaskTypeKey.equalsIgnoreCase(Storage.Task.taskTypeKeyList.get(2))) {
-            if (Storage.InjectionProcess.drugVolumn <= Storage.InjectionProcess.DRUG_VOLUMN20_MAX &&
-                    Storage.InjectionProcess.drugVolumn >= Storage.InjectionProcess.DRUG_VOLUMN20_MIN) {
+            if (Storage.InjectionProcess.drugVolume <= Storage.InjectionProcess.DRUG_VOLUMN20_MAX &&
+                    Storage.InjectionProcess.drugVolume >= Storage.InjectionProcess.DRUG_VOLUMN20_MIN) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 20 : Right volume [" + Storage.InjectionProcess.drugVolume + "]");
                 Storage.InjectionProcess.drugVolumeCorrect = true;
                 Storage.InjectionProcess.totalPoint20++;
             }
             if (Storage.InjectionProcess.dept <= Storage.InjectionProcess.MAXDEPT20 && Storage.InjectionProcess.dept >= Storage.InjectionProcess.MINDEPT20) {
+                Log.d("PTS_MANAGER" , "Adding PTS on 20 : Right dept [" + Storage.InjectionProcess.dept + "]");
                 Storage.InjectionProcess.deptCorrect = true;
                 Storage.InjectionProcess.totalPoint20++;
             }
@@ -141,7 +146,7 @@ public class ResultActivity extends AppCompatActivity {
             stEqpDrug.setImageDrawable(getDrawable(R.drawable.incorrect));
         }
         if (!Storage.InjectionProcess.drugVolumeCorrect) {
-            eqpDrugVolumn.setText(getString(R.string.select_result_drug_volumn_x));
+            eqpDrugVolume.setText(getString(R.string.select_result_drug_volumn_x));
             stDrugVol.setImageDrawable(getDrawable(R.drawable.incorrect));
         }
 

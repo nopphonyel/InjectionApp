@@ -84,7 +84,7 @@ public class Storage {
         public static boolean glove = false , cottonAlc = false , injectCorrect = false , deptCorrect = false , useCotton = false;
 
         public static boolean syringe = false , needleSize = false , drug=false , drugVolumeCorrect;
-        public static float drugVolumn = 0;
+        public static float drugVolume = 0;
 
         public static float dept = 0;
         public static void resetProcessMarks(){
@@ -96,7 +96,8 @@ public class Storage {
             syringe = false;
             needleSize = false;
             drug = false;
-            drugVolumn = 0;
+            drugVolumeCorrect = false;
+            drugVolume = 0;
             dept = 0;
             totalPoint00 = 0;
             totalPoint10 = 0;

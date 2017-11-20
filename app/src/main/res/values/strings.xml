@@ -323,4 +323,15 @@
     <string name="select_needle_size_unavi">Using built in needle</string>
     <string name="ok">OK</string>
     <string name="review_task">Review task</string>
+
+    <string name="htp_title_1">ถุงมือ</string>
+    <string name="htp_title_2">สำลีชุบแอลกอฮอล์</string>
+    <string name="htp_title_3">เข็มฉีดยา</string>
+    <string name="htp_title_4">สำลี</string>
+
+    <string name="htp_detail_1"> - วิธีการใช้งาน กดที่รูปเพื่อใช้งาน</string>
+    <string name="htp_detail_2"> - เมื่อกดใช้แล้ว ให้ใช้นิ้วแตะหรือลากบริเวณผิวเพื่อทำการเช็คผิวหนังด้วยแอลกอฮอล์</string>
+    <string name="htp_detail_3"> - กดที่รูปเพื่อใช้งาน \n\t\t1. ใช้ในการปรับองศาของเข็มฉีดยา \n\t\t2. ใช้ในการปรับความลึกของเข็ม\n- ปุ่ม inject ใช้สำหรับฉีกวักซีน</string>
+    <string name="htp_detail_4"> - กดใช้แล้ว ให้ใช้นิ้วแปะที่ผิวหนัง</string>
+
 </resources>

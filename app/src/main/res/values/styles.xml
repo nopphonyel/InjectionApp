@@ -47,6 +47,13 @@
         <item name="android:layout_height">80dp</item>
     </style>
 
+    <style name="how_to_play_pic">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
     <style name="InformationTitle">
         <item name="android:textSize">30sp</item>
         <item name="android:textStyle">bold</item>

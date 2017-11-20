@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/InjectionRoom.iml" filepath="$PROJECT_DIR$/InjectionRoom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InjectionApp.iml" filepath="$PROJECT_DIR$/InjectionApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -49,6 +49,23 @@
 
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/how_to_play_title"
+        android:layout_below="@id/relativeLayout"
+        style="@style/TitleTextView"
+        android:text="HOW TO PLAY"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_below="@id/how_to_play_title"
+        android:layout_above="@id/start_task"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ScrollView>
+
     <Button
         android:id="@+id/start_task"
         style="@style/BigButton.ActionPositive"
